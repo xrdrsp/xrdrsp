@@ -1,0 +1,417 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mathematics Tools | Yuan Gao</title><meta name="description" content="函数求导工具  函数输入框:  自变量:      阶数:  0 1 2 3 4 5 6 7 8 9 10      不定积分计算器  请输入你需要积分的函数表达式:  自变量:         定积分计算器  请输入你需要积分的函数表达式:  自变量:  从:  到:       极限计算器  请输入一个函数并计算极限:  极限变量:      x趋向于:       极限类型  双侧极限 右"><meta name="keywords" content="数学,工具"><meta name="author" content="xrdrsp"><meta name="copyright" content="xrdrsp"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://blog.xrdrsp.pw/2020/03/09/Mathematics-Tools/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="Mathematics Tools"><meta property="og:url" content="http://blog.xrdrsp.pw/2020/03/09/Mathematics-Tools/"><meta property="og:site_name" content="Yuan Gao"><meta property="og:description" content="函数求导工具  函数输入框:  自变量:      阶数:  0 1 2 3 4 5 6 7 8 9 10      不定积分计算器  请输入你需要积分的函数表达式:  自变量:         定积分计算器  请输入你需要积分的函数表达式:  自变量:  从:  到:       极限计算器  请输入一个函数并计算极限:  极限变量:      x趋向于:       极限类型  双侧极限 右"><meta property="og:image" content="https://s1.ax1x.com/2020/05/03/YS6UpR.png"><meta property="article:published_time" content="2020-03-09T08:20:31.000Z"><meta property="article:modified_time" content="2020-07-02T09:18:34.521Z"><meta name="twitter:card" content="summary"><script><!-- hexo-inject:begin --><!-- hexo-inject:end -->var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="prev" title="[Solution] Luogu P2433" href="http://blog.xrdrsp.pw/2020/03/27/luogu-p2433/"><link rel="next" title="Mathematics" href="http://blog.xrdrsp.pw/2020/01/01/Mathematics/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: ,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Yuan Gao" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='null'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">14</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">4</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/discussion/"><i class="fa-fw fa fa-comment"></i><span> Discussion</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="https://xrdrsp.pw" target="_blank" rel="noopener"><span> xrdrsp.pw</span></a></li><li><a class="site-page" href="/"><span> Blog</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://s1.ax1x.com/2020/05/03/YS6UpR.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Yuan Gao</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/discussion/"><i class="fa-fw fa fa-comment"></i><span> Discussion</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="https://xrdrsp.pw" target="_blank" rel="noopener"><span> xrdrsp.pw</span></a></li><li><a class="site-page" href="/"><span> Blog</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">Mathematics Tools</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 03-09-2020 16:20:31"><i class="far fa-calendar-alt fa-fw"></i> Created 03-09-2020</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 07-02-2020 17:18:34"><i class="fas fa-history fa-fw"></i> Updated 07-02-2020</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fas fa-inbox fa-fw post-meta__icon"></i><a class="post-meta__categories" href="/categories/Mathematics/">Mathematics</a><i class="fas fa-angle-right post-meta__separator"></i><i class="fas fa-inbox fa-fw post-meta__icon"></i><a class="post-meta__categories" href="/categories/Mathematics/Tools/">Tools</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta__icon"></i><span>Word count:</span><span class="word-count">536</span><span class="post-meta__separator">|</span><i class="far fa-clock fa-fw post-meta__icon"></i><span>Reading time: 1 min</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="far fa-eye fa-fw post-meta__icon"></i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="far fa-comments fa-fw post-meta__icon"></i><span>Comments:</span><a href="/2020/03/09/Mathematics-Tools/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2020/03/09/Mathematics-Tools/" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><b>函数求导工具</b><br>
+<form name="form1" action="http://zh.numberempire.com/derivativecalculator.php" method="post">
+函数输入框:<br>
+<input name="function" size="80" maxlength="300" type="text"><br>
+自变量: <input name="var" size="3" maxlength="3" value="x" type="text">    
+阶数: <select name="order">
+<option value="0">0</option>
+<option value="1" selected="selected">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+</select>
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+<b>不定积分计算器</b><br>
+<form name="form1" action="http://zh.numberempire.com/integralcalculator.php" method="post">
+请输入你需要积分的函数表达式:<br>
+<input name="function" size="80" maxlength="160" value="" type="text"><br>
+自变量:<input name="var" size="3" maxlength="3" value="x" type="text">    
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+<b>定积分计算器</b><br>
+<form name="form1" action="http://zh.numberempire.com/definiteintegralcalculator.php" method="post">
+请输入你需要积分的函数表达式:<br>
+<input name="function" size="80" maxlength="160" value="" type="text"><br>
+自变量: <input name="var" size="3" maxlength="3" value="x" type="text">
+从: <input name="a" size="12" maxlength="12" value="0" type="text">
+到: <input name="b" size="12" maxlength="12" value="1" type="text">
+<input size="40" name="answers" value="" type="hidden">
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+<b>极限计算器</b><br>
+<form name="form1" action="http://zh.numberempire.com/limitcalculator.php" method="post">
+请输入一个函数并计算极限:
+<input name="function" size="80" maxlength="160" value="" type="text"><br>
+极限变量: <input name="var" size="3" maxlength="3" value="x" type="text">    
+x趋向于: <input name="val" size="12" maxlength="12" value="0" type="text">    
+<input size="40" name="answers" value="" type="hidden">
+极限类型 <select name="limit_type">
+<option value="two-sided">双侧极限</option>
+<option value="plus">右侧极限</option>
+<option value="minus">左侧极限</option>
+</select>
+<input name="return" value="1" type="hidden">
+<input value="计算" type="submit">
+</form>
+
+
+<b>分数计算器</b><br>
+<form name="form1" action="http://zh.numberempire.com/fractionscalculator.php" method="post">
+输入一个分数表达式:<br>
+<input name="function" size="80" maxlength="160" value="" type="text">
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>方程求解</b><br>
+<form name="form1" action="http://zh.numberempire.com/equationsolver.php" method="post">
+输入逗号以分隔多个方程:<br>
+<input name="function" size="80" maxlength="160" value="" type="text"><br>
+<input name="var" size="10" maxlength="10" value="x" type="text">
+<input size="40" name="answers" value="" type="hidden">
+<input value="求解" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>表达式化简</b><br>
+<form name="form1" action="http://zh.numberempire.com/simplifyexpression.php" method="post">
+输入一个表达式来简化:<br>
+<input name="function" size="80" maxlength="300" value="" type="text">
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>因式分解工具</b><br>
+<form name="form1" action="http://zh.numberempire.com/factoringcalculator.php" method="post">
+请输入您需要分解因式的表达式：:<br>
+<input name="function" size="80" maxlength="300" value="" type="text">
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>反函数计算器</b><br>
+<form name="form1" action="http://zh.numberempire.com/inversefunctioncalculator.php" method="post">
+输入函数来计算其反函数:<br>
+<input name="function" size="80" maxlength="160" value="" type="text"><br>
+<input name="var" size="10" maxlength="10" value="x" type="text">
+<input size="40" name="answers" value="" type="hidden">
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>表达式计算器</b><br>
+<form name="form1" action="http://zh.numberempire.com/expressioncalculator.php" method="post">
+输入要计算的表达式:<br>
+<input name="function" size="80" maxlength="300" value="" type="text">
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>矩阵计算器</b><br>
+<form name="form1" action="http://zh.numberempire.com/matrixcalculator.php" method="post">
+输入矩阵 A:<br>
+<textarea type="text" name="matrix1" cols="60" rows="20"></textarea>
+<table>
+<tbody><tr><td>
+<input name="determinant" checked="checked" type="checkbox"> 矩阵的行列式
+</td><td>
+<input name="transpose" checked="checked" type="checkbox"> 转置矩阵
+</td></tr><tr><td>
+
+<input name="trace" checked="checked" type="checkbox"> 矩阵迹
+</td><td>
+<input name="rank" checked="checked" type="checkbox"> 矩阵的秩
+</td></tr><tr><td>
+<input name="inverse" type="checkbox"> 逆矩阵
+</td><td>
+<input name="eigenvalues" type="checkbox"> 特征值
+</td></tr><tr><td>
+<input name="triangularize" type="checkbox"> 下三角矩阵
+</td><td>
+<input name="square" type="checkbox"> A<sup>2</sup>
+</td></tr></tbody></table>
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>矩阵运算</b><br>
+<form name="form1" action="http://zh.numberempire.com/matrixbinarycalculator.php" method="post">
+<table><tbody><tr align="center"><td>输入矩阵 A:</td><td>输入矩阵 B:</td></tr>
+<tr><td><textarea type="text" name="matrix1" cols="60" rows="20"></textarea></td>
+<td><textarea type="text" name="matrix2" cols="60" rows="20"></textarea></td></tr></tbody></table>
+<br>
+<table><tbody><tr><td>
+<input name="add" checked="checked" type="checkbox">加法
+</td><td>
+<input name="sub" checked="checked" type="checkbox">减法
+</td><td>
+<input name="mult" checked="checked" type="checkbox">乘法
+</td></tr>
+</tbody></table>
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>质数发生器和校验器</b><br>
+<form name="form1" action="http://zh.numberempire.com/primenumbers.php" method="post">
+输入一个自然数，并选择相应的功能:<br>
+<input name="number" size="80" maxlength="128" value="" type="text"><br>
+<select name="action">
+<option value="check" selected="selected">检验是否为质数
+</option><option value="next">下一个质数
+</option><option value="prev">上一个质数
+</option></select>
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>整数分解工具</b><br>
+<form name="form1" action="http://zh.numberempire.com/numberfactorizer.php" method="post">
+请输入您需要分解的整数:<br>
+<input name="number" size="80" maxlength="60" value="" type="text">
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>斐波那契数计算工具</b><br>
+<form name="form1" action="http://zh.numberempire.com/fibonaccinumbers.php" method="post">
+请输入一个非负整数:<br>
+<input name="number" size="40" maxlength="10" value="" type="text">
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>伯努利数发生器</b><br>
+<form name="form1" action="http://zh.numberempire.com/bernoullinumbers.php" method="post">
+请输入一个非负整数:<br>
+<input name="number" size="40" maxlength="10" value="" type="text">
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>欧拉数计算工具</b><br>
+<form name="form1" action="http://zh.numberempire.com/eulernumbers.php" method="post">
+请输入一个非负整数:<br>
+<input name="number" size="40" maxlength="10" value="" type="text">
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>阶乘计算器</b><br>
+<form name="form1" action="http://zh.numberempire.com/factorialcalculator.php" method="post">
+请输入一个非负整数:<br>
+<input name="number" size="40" maxlength="10" value="" type="text">
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+
+<b>组合数计算器</b><br>
+<form action="http://zh.numberempire.com/combinatorialcalculator.php" method="post">
+组合数计算方法，从N项中选出M项.
+<table><tbody><tr><td align="right">
+是否具有顺序?
+</td><td>
+<select name="ordered">
+<option value="true">是</option>
+<option value="false" selected="selected">否</option>
+</select>
+</td></tr>
+<tr><td align="right">
+元素是否可以选择一次以上?
+</td><td>
+<select name="repeated">
+<option value="ture">是</option>
+<option value="false" selected="selected">否</option>
+</select>
+</td></tr><tr><td align="right">N = </td><td><input name="n" size="8" type="text"></td></tr>
+<tr><td align="right">M =</td><td><input name="m" size="8" type="text"></td></tr>
+</tbody></table>
+<input value="计算"  type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>统计计算器</b><br>
+<form name="form1" action="http://zh.numberempire.com/statisticscalculator.php" method="post">
+输入一个空格，逗号或新行分隔的数字:<br>
+<textarea type="text" name="series" cols="60" rows="20"></textarea>
+<br><table>
+<tbody><tr><td><input name="mean" checked="checked" type="checkbox">平均数</td>
+<td><input name="median" type="checkbox">中位数</td>
+<td><input name="harmonic_mean" type="checkbox">调和平均数</td></tr>
+<tr><td><input name="geometric_mean" type="checkbox">几何平均数</td>
+<td><input name="min" type="checkbox">最小</td>
+<td><input name="max" type="checkbox">最大</td></tr>
+<tr><td><input name="range" type="checkbox">范围</td>
+<td><input name="var" checked="checked" type="checkbox">方差</td>
+<td><input name="var1" type="checkbox">更正方差</td></tr>
+<tr><td><input name="std" type="checkbox">标准偏差</td>
+<td><input name="std1" type="checkbox">更正的标准偏差</td>
+<td><input name="relstd" type="checkbox">变异系数</td></tr>
+<tr><td><input name="mean_dev" type="checkbox">平均偏差</td>
+<td><input name="median_dev" type="checkbox">中位数偏差</td>
+<td><input name="skewness" checked="checked" type="checkbox">偏度</td></tr>
+</tbody></table>
+<input value="计算" type="submit">
+<input name="return" value="1" type="hidden">
+</form>
+
+
+<b>函数图像绘制工具</b><br>
+函数输入框:<br>
+<form name="form1" action="http://zh.numberempire.com/graphingcalculator.php" method="get">
+<input id="functions" name="functions" value="log(x),sqrt(x),x,x^2" class="full_width" type="text"><br>
+X 坐标, 从: <input id="xmin" name="xmin" value="0" size="10" type="text">
+到: <input id="xmax" name="xmax" value="3" size="10" type="text"><br>
+
+Y 坐标, 从: <input id="ymin" name="ymin" value="-1" size="10" type="text">
+到: <input id="ymax" name="ymax" value="1" size="10" type="text"><br>
+<input value="绘制图像" type="submit">
+<input name="return" value="1" type="hidden">
+</form></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">xrdrsp</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://blog.xrdrsp.pw/2020/03/09/Mathematics-Tools/">http://blog.xrdrsp.pw/2020/03/09/Mathematics-Tools/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2020/05/03/YS6UpR.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/03/27/luogu-p2433/"><img class="prev-cover" data-src="https://s1.ax1x.com/2020/05/03/YS6UpR.png" onerror="onerror=null;src='/null'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">[Solution] Luogu P2433</div></div></a></div><div class="next-post pull-right"><a href="/2020/01/01/Mathematics/"><img class="next-cover" data-src="https://s1.ax1x.com/2020/05/03/YS6UpR.png" onerror="onerror=null;src='/null'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Mathematics</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020/01/01/Mathematics/" title="Mathematics"><img class="relatedPosts_cover" data-src="https://s1.ax1x.com/2020/05/03/YS6UpR.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 01-01-2020</div><div class="relatedPosts_title">Mathematics</div></div></a></div></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var requestSetting = function (from,set) {
+  var from = from
+  var setting = set.split(',').filter(function(item){
+  return from.indexOf(item) > -1
+  });
+  setting = setting.length == 0 ? from :setting;
+  return setting
+}
+
+var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
+var requiredFields = requestSetting(['nick','mail'],'nick,mail')
+
+window.valine = new Valine({
+  el:'#vcomment',
+  appId: 'dE9k2LvAgox0otTsmCmllREl-gzGzoHsz',
+  appKey: 'clMmQtbi1pRHyVPx80jeJEja',
+  placeholder: 'Please leave your footprints',
+  avatar: '',
+  meta: guestInfo,
+  pageSize: '10',
+  lang: 'en',
+  recordIP: true,
+  serverURLs: '',
+  emojiCDN: '//i0.hdslb.com/bfs/emote/',
+  emojiMaps: "",
+  enableQQ: false,
+  requiredFields: requiredFields
+});</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By xrdrsp</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="readmode" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font_plus" title="Increase Font Size"><i class="fas fa-plus"></i></button><button id="font_minus" title="Decrease Font Size"><i class="fas fa-minus"></i></button><button id="darkmode" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="Setting"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="scroll_to_comment fas fa-comments"></i></a><button id="go-up" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script>$(function () {
+  $('span.katex-display').wrap('<div class="katex-wrap"></div>')
+})</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/search/local-search.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body></html>

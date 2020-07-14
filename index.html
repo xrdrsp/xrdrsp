@@ -1,0 +1,178 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Yuan Gao</title><meta name="description" content="blog"><meta name="author" content="xrdrsp"><meta name="copyright" content="xrdrsp"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://blog.xrdrsp.pw/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="Yuan Gao"><meta property="og:url" content="http://blog.xrdrsp.pw/"><meta property="og:site_name" content="Yuan Gao"><meta property="og:description" content="blog"><meta property="og:image" content="http://blog.xrdrsp.pw/img/avatar.png"><meta property="article:published_time" content="2020-07-14T12:35:46.451Z"><meta property="article:modified_time" content="2020-07-14T12:35:46.451Z"><meta name="twitter:card" content="summary"><script><!-- hexo-inject:begin --><!-- hexo-inject:end -->var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Yuan Gao" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='null'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">14</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">4</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/discussion/"><i class="fa-fw fa fa-comment"></i><span> Discussion</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="https://xrdrsp.pw" target="_blank" rel="noopener"><span> xrdrsp.pw</span></a></li><li><a class="site-page" href="/"><span> Blog</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://s1.ax1x.com/2020/05/03/YS6UpR.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Yuan Gao</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/discussion/"><i class="fa-fw fa fa-comment"></i><span> Discussion</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="https://xrdrsp.pw" target="_blank" rel="noopener"><span> xrdrsp.pw</span></a></li><li><a class="site-page" href="/"><span> Blog</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Yuan Gao</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/xrdrsp" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xrdrsp@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/05/15/luogu-p1469/" title="[Solution] Luogu P1469">[Solution] Luogu P1469</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 05-15-2020 00:00:00"><i class="far fa-calendar-alt"></i>05-15-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Solution/">Solution</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content"><!-- hexo-inject:begin --><!-- hexo-inject:end -->第 $012$ 篇题解。
+Main Idea给你 $n$ 个数，求那个出现了奇数次的数是哪个。
+Analysis由于 $1 \leq n \leq 10^7 + 1$ 且 $1 \leq a_i \geq 10^9$，我们必须在 $\mathit{O}(n)$ 的时间复杂度里完成计算。
+此题使用位运算比较合适（快）。
+c++ 中，按位异或（^）运算：相应位上的值相同，就返回 $0$，否则返回 $1$（当然是二进制中）。如 09 和 11 异或的结果是 02。详细运算如下：
+12341001 (09)1011 (11)----0010 (02)
+那么怎么算呢？
+注意到 按位异或运算具有交换律。即 $a \oplus b = b \oplus a$。可得将所有数全异或一边跟对排好序后异或是一样的。
+则：
+
+\underbrace{(a \oplus a \oplus \cdots \oplus a)}_{\text{偶数个}}
+\oplus
+\underbrace{(b \oplus b \oplus \cdots \oplus b)}_{\text{偶数个}}
+\oplus \cdots ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/19/luogu-p6402/" title="[Solution] Luogu P6402">[Solution] Luogu P6402</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 04-19-2020 00:00:00"><i class="far fa-calendar-alt"></i>04-19-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Solution/">Solution</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">第 $010$ 篇题解。
+Analysis本题是 map 练习题。
+
+std::map 定义于头文件 &lt;map&gt;，是有序键值对容器，它的元素的键是唯一的。用比较函数 Compare 排序键。搜索、移除和插入操作拥有对数复杂度。 map 通常实现为红黑树。
+——摘自「C++ Reference std::map」
+
+可以把 std::map 看作一个映射，即第一个值（关键字，$\rm{key}$）唯一对应着第二个值（值，$\rm{value}$）。
+std::map 可以存储任意类型的数据，这解决了数组中不能出现「负下标」、「字符串下标」等问题。所以是一个常用的容器。
+有关 std::map 的更多信息，可以点开上面的链接看。
+对于这个题，用数组存名字和是否完成肯定是不现实的，因为不支持「字符串下标」。所以就要使用 std::map。
+1map &lt;string, int&gt; participant;
+这句话定义了映射，std::string 类型的关键字（名字）对应着 int 类型的值（名字出现的次数）。
+接着，对每个选手进行统计。由于 参赛者的名字不一定是唯一的  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/13/luogu-p6368/" title="[Solution] Luogu P6368">[Solution] Luogu P6368</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 04-13-2020 00:00:00"><i class="far fa-calendar-alt"></i>04-13-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Solution/">Solution</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">第 $008$ 篇题解。
+1 Analysis一个简单的模拟题。
+对于左右翻转，可以记录正在翻转的列 $p$，初始值为 $c$。每次翻转完一列以后将其还原为 $c$。（还原为 $c$ 是因为先枚举 $p$。）
+对于上下翻转，可以记录正在翻转的行 $q$，初始值为 $r$。每次翻转完一行以后将其减 $1$。（减 $1$ 是因为后枚举 $q$。）
+2 Code123456789101112131415161718192021222324252627282930313233343536373839404142434445464748#include &lt;cstdio&gt;#include &lt;cstring&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;const int N = 100;int r, c;char a[N][N];int x, y;int main() &#123;    cin &gt;&gt; r &gt;&gt; c;    for (int i = 1;  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/12/luogu-p6369/" title="[Solution] Luogu P6369">[Solution] Luogu P6369</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 04-12-2020 00:00:00"><i class="far fa-calendar-alt"></i>04-12-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Solution/">Solution</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">第 $007$ 篇题解。
+这道题比较水，主要考察数组 ，应该标成红题。
+1 Analysis暴力，读入数组，遍历。遇到不是 . 的就往上、下、左、右、左上、下、右上、右下八个方向判断是否有满足条件（三个字符相同）的。如有，则输出那个字符并退出；否则，继续寻找。需要防止数组越界导致 $\colorbox{purple}{RE}$。所以从 $3$ 始就好了。
+2 Code12345678910111213141516171819202122232425262728293031323334#include &lt;cstdio&gt;#include &lt;cstring&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;const int N = 40;int n;char a[N][N];int main() &#123;    cin &gt;&gt; n;    for (int i = 3; i &lt; n + 3; i++) &#123;		// 从 3 开始，主要防数组越界。  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/11/codeforces-1334b/" title="[Solution] Codeforces 1334B">[Solution] Codeforces 1334B</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 04-11-2020 00:00:00"><i class="far fa-calendar-alt"></i>04-11-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Solution/">Solution</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">本题是一个贪心题。
+其实不需要暴力每种选择，只要知道何时能通过求平均得到最大的富人数就行。
+可以从大到小排序，然后从前往后枚举。具体见注释。
+reverse() 的功能是求倒序。允许字符串、数组等。
+12345678910111213141516171819202122232425262728293031323334#include &lt;cstdio&gt;#include &lt;cstring&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;const int N = 1e5 + 10;long long a[N];long long n, x;long long T;int main() &#123;    cin &gt;&gt; T;    while (T--) &#123;        scanf("%lld%lld", &amp;n, &amp;x);        for (int i = 1; i &lt;= n; i++) &#123;             ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/09/codeforces-1333a/" title="[Solution] Codeforces 1333A">[Solution] Codeforces 1333A</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 04-09-2020 00:00:00"><i class="far fa-calendar-alt"></i>04-09-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Solution/">Solution</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">本题是一个规律题。手玩几个样例以后能发现一些有意思的东西。比如对于 $n$、$m$ 任意的图，都有一种固定的选取方法可以满足条件。比如这个：
+
+图中黑色格子表示被染黑的部分，白色格子表示白色部分。（废话）
+数字表示计数。即在 $6 \times 6$ 的方格里，只需要把 $i = 1$ 或 $j = 1$ 的格子染黑，就是一个合法的方案了。（注意：$(1, 1)$（左上角的格子）不算。）
+对于 $n$、$m$ 任意的图也一样。读者可以自己画画看。
+即：在这样的情况下，$B = n + m - 2$，$W = (n - 1) + (m - 1) - 1 = n + m - 3$，可得 $B = W + 1$。
+所以就可以写代码了。
+123456789101112131415161718192021222324#include &lt;cstdio&gt;#include &lt;cstring&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int main() &#123;    int ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/06/codeforces-1330a/" title="[Solution] Codeforces 1330A">[Solution] Codeforces 1330A</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 04-06-2020 00:00:00"><i class="far fa-calendar-alt"></i>04-06-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Solution/">Solution</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">由于在每次判断中不需要知道具体的名次，而只需要知道 Dreamoon 有没有达到过这个名次。所以 sort() 是不必要的。用 $a_i$ 存下是否达到过 $i$ 这个名次，然后按顺序判断即可。这是符合要求的
+下面是 $\text{AC}$ 代码，具体见注释。
+1234567891011121314151617181920212223242526272829303132333435363738#include &lt;cstdio&gt;#include &lt;cstring&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;const int N = 110;int a[2 * N];                               // 开二倍int main()&#123;    int t;    cin &gt;&gt; t;    while (t--)    &#123;        memset(a, 0, sizeof(a));        int n, ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/04/%E4%B8%BA%E5%91%8A%E5%88%AB%E7%BA%AA%E5%BF%B5%EF%BC%8C%E4%B8%BA%E8%B4%A3%E4%BB%BB%E5%89%8D%E8%A1%8C.md/" title="为告别纪念，为责任前行">为告别纪念，为责任前行</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 04-04-2020 00:00:00"><i class="far fa-calendar-alt"></i>04-04-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/DailyLife/">DailyLife</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%94%9F%E6%B4%BB/">生活</a></span></div><div class="content">我们在这个冬天所经历的一切，是悲伤的记忆，是告别亲人的不舍，也是坚定抗争中生命的顽强与不屈。带着逝者的遗志，我们不会被轻易击垮。严冬之后，必有万物复苏，必有夏花烂漫。
+不觉间，将是清明。
+对人们而言，刚刚过去的这个冬天，似乎格外漫长。突如其来的新冠肺炎疫情，让中国社会与公众的生活进入了暂停状态。壮士断腕般的“封城”举措，“全国一盘棋”式的公共卫生动员，加上史无前例的大规模隔离行动，让我们带着与病毒抗争到底的决心，度过了一段艰难时光。
+春分已过，清明悄然到来。在疫情影响下，这个遥寄哀思、悼亡怀人的日子，也因此有了一层格外沉重的特殊涵义。新冠病毒夺去很多人的生命，让很多家庭痛失父母、爱人、子女。更有一些医务工作者和抗疫工作人员，为此而殉职牺牲。那许许多多的面容和身影，永远定格在了2020年初春。
+我们为逝者点燃烛光，俯身鞠躬，遥寄一份哀悼和思念。在英雄的城市、英雄的人民、英雄的逆行者背后，是一个个鲜活生动的人，是一段段有着欢笑泪水的故事，他们的悲痛，他们的哀伤，他们的抗争，他们的不屈，都值得铭记。
+那不只是一个数字，一个名字，一块碑。每一个逝者的过往，都是生者的哀思。疫情防控的特殊时刻，许 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/02/codeforces-1332a/" title="[Solution] Codeforces 1332A">[Solution] Codeforces 1332A</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 04-02-2020 00:00:00"><i class="far fa-calendar-alt"></i>04-02-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Solution/">Solution</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">这是本人的第 $003$ 篇题解。
+这个题作为 CF div.2 T1，还是比较水的（我比较菜）。
+数据范围 $10^8$，暴力搜索肯定不行。
+这时就要想一些省时间的方法了。
+首先，可以模拟样例找规律。
+可以发现，只要小猫有足够的活动空间（走完要求的路线之后还在区域内）就不会走丢。且小猫至少有 $1\times1$ 的空间（除非不需要走路）。
+所以就可以写代码了。
+12345678910111213141516171819202122232425262728#include &lt;cstdio&gt;#include &lt;cstring&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int main() &#123;    int T;    cin &gt;&gt; T;    while (T--) &#123;        int l, r, d, u; 			// 左、右、下、上。        int x, y, x1, x2, y1, y2;	// 小猫位置坐标和两 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/01/codestyle/" title="My Code Style for OI">My Code Style for OI</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 04-01-2020 00:00:00"><i class="far fa-calendar-alt"></i>04-01-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Code/">Code</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%94%9F%E6%B4%BB/">生活</a></span></div><div class="content">
+本文介绍 xrdrsp 的 OI 中的代码规范。其来源主要为 Studying Father 的代码规范、_rqy 的代码规范、Menci 的代码规范
+
+0 可能用到的词语解释
+必须：任何时候均要遵循的规范。
+应该：绝大多数正常情况下要遵循的规范，只允许在少数特殊情形下出现例外。
+只能：不能采用其他规范。
+推荐：这一规范符合通行规则，正常范围下优先使用。
+可以/允许：非强制性的规范，可以视情况实施。
+不应/不推荐：因为不符合通行规则，而在大多数情况下不使用该规则。
+禁止：任何时候均不能使用的规则。
+
+
+1 编译预处理指令
+#include 语句必须置于程序开头。
+多个库的顺序应该遵循如下原则：首先是自定义库，接下来是 C++ 库，最后是 C 库。其中 C 库和 C++ 库禁止使用 #include &quot;foo&quot; ，而必须使用 #include &lt;foo&gt; 。
+禁止使用万能头文件。
+#define 不推荐用于定义常量等，定义常量用 const。#define 可以替代 typedef 等。
+禁止使用 #define 来代替函数定义，以及缩写控制性语句。
+所 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png" onerror="this.onerror=null;this.src='/null'" alt="avatar"/><div class="author-info__name">xrdrsp</div><div class="author-info__description">An OIer from Ningbo, China</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">Articles</div><div class="length_num">14</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">Tags</div><div class="length_num">4</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">Categories</div><div class="length_num">5</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="Bookmark"><i class="fas fa-bookmark"></i><span>Bookmark</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xrdrsp" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xrdrsp@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is xrdrsp's Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/2020/05/15/luogu-p1469/"><div class="aside-post-title no-aside-cover"><div class="aside-post_title" href="/2020/05/15/luogu-p1469/" title="[Solution] Luogu P1469">[Solution] Luogu P1469</div><time class="aside-post_meta post-meta__date" title="Created 05-15-2020 00:00:00">05-15-2020</time></div></a></div><div class="aside-recent-post"><a href="/2020/04/19/luogu-p6402/"><div class="aside-post-title no-aside-cover"><div class="aside-post_title" href="/2020/04/19/luogu-p6402/" title="[Solution] Luogu P6402">[Solution] Luogu P6402</div><time class="aside-post_meta post-meta__date" title="Created 04-19-2020 00:00:00">04-19-2020</time></div></a></div><div class="aside-recent-post"><a href="/2020/04/13/luogu-p6368/"><div class="aside-post-title no-aside-cover"><div class="aside-post_title" href="/2020/04/13/luogu-p6368/" title="[Solution] Luogu P6368">[Solution] Luogu P6368</div><time class="aside-post_meta post-meta__date" title="Created 04-13-2020 00:00:00">04-13-2020</time></div></a></div><div class="aside-recent-post"><a href="/2020/04/12/luogu-p6369/"><div class="aside-post-title no-aside-cover"><div class="aside-post_title" href="/2020/04/12/luogu-p6369/" title="[Solution] Luogu P6369">[Solution] Luogu P6369</div><time class="aside-post_meta post-meta__date" title="Created 04-12-2020 00:00:00">04-12-2020</time></div></a></div><div class="aside-recent-post"><a href="/2020/04/11/codeforces-1334b/"><div class="aside-post-title no-aside-cover"><div class="aside-post_title" href="/2020/04/11/codeforces-1334b/" title="[Solution] Codeforces 1334B">[Solution] Codeforces 1334B</div><time class="aside-post_meta post-meta__date" title="Created 04-11-2020 00:00:00">04-11-2020</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>Categories</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Code/"><span class="card-category-list-name">Code</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/DailyLife/"><span class="card-category-list-name">DailyLife</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Mathematics/"><span class="card-category-list-name">Mathematics</span><span class="card-category-list-count">2</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Mathematics/Tools/"><span class="card-category-list-name">Tools</span><span class="card-category-list-count">1</span></a></li></ul><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Solution/"><span class="card-category-list-name">Solution</span><span class="card-category-list-count">10</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 16px; color: #999">工具</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 19px; color: #99a1ac">数学</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 19px; color: #99a1ac">生活</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 22px; color: #99a9bf">题解</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">05-2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">04-2020</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/03/"><span class="card-archive-list-date">03-2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">01-2020</span><span class="card-archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">Article :</div><div class="webinfo-article-count">14</div></div><div class="webinfo-item"><div class="webinfo-site-wordcount-name">Total Count :</div><div class="webinfo-site-wordcount">9.8k</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">UV :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">PV :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By xrdrsp</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="darkmode" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="Setting"><i class="fas fa-cog"></i></button><button id="go-up" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/search/local-search.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body></html>

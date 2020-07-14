@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>[Solution] Luogu P2433 | Yuan Gao</title><meta name="description" content="这是本蒟蒻的第 $001$ 篇题解。 Posted on Sun Mar 15, at 21:04:00 upd on Mon Mar 16, at 07:02:41 （更改了少数部分。） 问题 1输出 I love Luogu!。直接输出即可。 1printf(&quot;I love Luogu!&quot;); 问题 2 由于小 A 和 Uim 分别拿走了 $2$、$4$ 个，则他们一共拿走了 $2 + 4 &#x3D;"><meta name="keywords" content="题解"><meta name="author" content="xrdrsp"><meta name="copyright" content="xrdrsp"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://blog.xrdrsp.pw/2020/03/27/luogu-p2433/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="[Solution] Luogu P2433"><meta property="og:url" content="http://blog.xrdrsp.pw/2020/03/27/luogu-p2433/"><meta property="og:site_name" content="Yuan Gao"><meta property="og:description" content="这是本蒟蒻的第 $001$ 篇题解。 Posted on Sun Mar 15, at 21:04:00 upd on Mon Mar 16, at 07:02:41 （更改了少数部分。） 问题 1输出 I love Luogu!。直接输出即可。 1printf(&quot;I love Luogu!&quot;); 问题 2 由于小 A 和 Uim 分别拿走了 $2$、$4$ 个，则他们一共拿走了 $2 + 4 &#x3D;"><meta property="og:image" content="https://s1.ax1x.com/2020/05/03/YS6UpR.png"><meta property="article:published_time" content="2020-03-26T16:00:00.000Z"><meta property="article:modified_time" content="2020-07-02T09:24:02.353Z"><meta name="twitter:card" content="summary"><script><!-- hexo-inject:begin --><!-- hexo-inject:end -->var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="prev" title="[Solution] Luogu P6244" href="http://blog.xrdrsp.pw/2020/03/30/luogu-p6244/"><link rel="next" title="Mathematics Tools" href="http://blog.xrdrsp.pw/2020/03/09/Mathematics-Tools/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Yuan Gao" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='null'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">14</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">4</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/discussion/"><i class="fa-fw fa fa-comment"></i><span> Discussion</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="https://xrdrsp.pw" target="_blank" rel="noopener"><span> xrdrsp.pw</span></a></li><li><a class="site-page" href="/"><span> Blog</span></a></li></ul></div></div></div></div><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题-1"><span class="toc-text">问题 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题-2"><span class="toc-text">问题 2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题-3"><span class="toc-text">问题 3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题-4"><span class="toc-text">问题 4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题-5"><span class="toc-text">问题 5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题-6"><span class="toc-text">问题 6</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题-7"><span class="toc-text">问题 7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题-8"><span class="toc-text">问题 8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题-9"><span class="toc-text">问题 9</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题-10"><span class="toc-text">问题 10</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题-11"><span class="toc-text">问题 11</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题-12"><span class="toc-text">问题 12</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题-13"><span class="toc-text">问题 13</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题-14"><span class="toc-text">问题 14</span></a></li></ol></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://s1.ax1x.com/2020/05/03/YS6UpR.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Yuan Gao</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/discussion/"><i class="fa-fw fa fa-comment"></i><span> Discussion</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="https://xrdrsp.pw" target="_blank" rel="noopener"><span> xrdrsp.pw</span></a></li><li><a class="site-page" href="/"><span> Blog</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">[Solution] Luogu P2433</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 03-27-2020 00:00:00"><i class="far fa-calendar-alt fa-fw"></i> Created 03-27-2020</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 07-02-2020 17:24:02"><i class="fas fa-history fa-fw"></i> Updated 07-02-2020</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fas fa-inbox fa-fw post-meta__icon"></i><a class="post-meta__categories" href="/categories/Solution/">Solution</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta__icon"></i><span>Word count:</span><span class="word-count">1k</span><span class="post-meta__separator">|</span><i class="far fa-clock fa-fw post-meta__icon"></i><span>Reading time: 4 min</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="far fa-eye fa-fw post-meta__icon"></i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="far fa-comments fa-fw post-meta__icon"></i><span>Comments:</span><a href="/2020/03/27/luogu-p2433/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2020/03/27/luogu-p2433/" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><p>这是本蒟蒻的第 $001$ 篇题解。</p>
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><p>Posted on Sun Mar 15, at 21:04:00</p>
+<p>upd on Mon Mar 16, at 07:02:41 （更改了少数部分。）</p>
+<h3 id="问题-1"><a href="#问题-1" class="headerlink" title="问题 1"></a>问题 1</h3><p>输出 <code>I love Luogu!</code>。直接输出即可。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"I love Luogu!"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="问题-2"><a href="#问题-2" class="headerlink" title="问题 2"></a>问题 2</h3><ol>
+<li>由于小 A 和 Uim 分别拿走了 $2$、$4$ 个，则他们一共拿走了 $2 + 4 = 6$ 个。</li>
+<li>由于在 <code>1</code> 中，我们算出来小 A 和 Uim 共拿走了 $6$ 个，则八尾勇拿走了 $ 10 - 6 = 4$ 个。</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%d %d"</span>, <span class="number">2</span> + <span class="number">4</span>, <span class="number">10</span> - <span class="number">2</span> - <span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="问题-3"><a href="#问题-3" class="headerlink" title="问题 3"></a>问题 3</h3><p>这个问题考察我们对 cpp 中 <code>int</code> 的理解。当两个整形变量做除法时，若无法整除，则<strong>向下取整</strong>。如 <code>14 / 4</code> 的结果为 <code>3</code>。</p>
+<p>所以可以尽情地使用整形变量的除法了。</p>
+<ol>
+<li>$\dfrac{\text{总苹果数}}{\text{同学数}}$ 即为答案。</li>
+<li>$\text{同学数} \times \text{每个同学分的苹果数}$ 即为答案。</li>
+<li>$\text{总苹果数} - \text{分出去的苹果数}$ 即为答案。</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">14</span>, b = <span class="number">4</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n%d\n%d"</span>, a / b, (a / b) * b, a - (a / b) * b);</span><br></pre></td></tr></table></figure>
+<h3 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h3><p>$500 / 3$ 即为答案。由于<strong>保留 $6$ 位有效数字</strong>，得到 $500 / 3 \approx 166.667$，输出这个数即可。</p>
+<p>注：<code>%.3lf</code> 表示保留三位小数的<code>double</code>浮点数。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%.3lf"</span>, <span class="number">166.667</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="问题-5"><a href="#问题-5" class="headerlink" title="问题 5"></a>问题 5</h3><p>相遇问题。</p>
+<p>仔细观察（画图）可得知，是两列火车的车尾在相遇。所以，$S = 260 + 220 = 480$，$v = 12 + 20 = 32$。根据公式得到 $t = \dfrac{S}{v} = 15$。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"15"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="问题-6"><a href="#问题-6" class="headerlink" title="问题 6"></a>问题 6</h3><p><strong>注意保留 $6$ 位有效数字！</strong> 坑了我好久。</p>
+<p>根据勾股定理 $a^2 + b^2 = c^2$，代入即可。</p>
+<p>手算得到整数部分是 $10$（两位数），所以需要保留四位小数。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"10.8167"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="问题-7"><a href="#问题-7" class="headerlink" title="问题 7"></a>问题 7</h3><p>简单的模拟。</p>
+<ol>
+<li>$100 + 10 = 110$</li>
+<li>$110 - 20 = 90$</li>
+<li>剩 $0$ 元。</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"110\n90\n0"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="问题-8"><a href="#问题-8" class="headerlink" title="问题 8"></a>问题 8</h3><p><strong>注意保留 $6$ 位有效数字！</strong></p>
+<p>先明确公式：</p>
+<ol>
+<li>圆的周长：$C = \pi d = 2 \pi r$；</li>
+<li>圆的面积：$S = \pi r^2$；</li>
+<li>球的体积：$V = \frac{4}{3}\pi r^3$。</li>
+</ol>
+<p>就可以通过套公式来得到结果啦！</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"31.4159\n78.5398\n523.599"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="问题-9"><a href="#问题-9" class="headerlink" title="问题 9"></a>问题 9</h3><p>数学题；倒着推。</p>
+<p>由于最后剩下一个，猴子贪吃了一个，除了这两个以外桃子的数量是总数量的一半，所以原苹果数为：$(1 + 1) \times 2 = 4$ 个。</p>
+<p>以此类推，得到总苹果数是 $22$ 个。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">天数</th>
+<th style="text-align:right">苹果个数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:right">4</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:right">10</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td style="text-align:right">22</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"22"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="问题-10"><a href="#问题-10" class="headerlink" title="问题 10"></a>问题 10</h3><p>答案是 $9$。并不可能是别的。如果 $&gt; 10$，则评测时间将会 $&lt; 6 \operatorname{min}$；如果 $&lt; 8$，则评测时间将会 $&gt; 30 \operatorname{min}$。</p>
+<p>所以直接输出。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"9"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="问题-11"><a href="#问题-11" class="headerlink" title="问题 11"></a>问题 11</h3><p><strong>注意保留 $6$ 位有效数字！</strong></p>
+<p>追及问题。</p>
+<p>有公式 $t = \dfrac{S}{v_1 - v_2}$，代入即可。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"33.3333"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="问题-12"><a href="#问题-12" class="headerlink" title="问题 12"></a>问题 12</h3><p>通过数数，得：</p>
+<ol>
+<li>答案为 $13$；</li>
+<li>答案为 $R$。</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"13\nR"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="问题-13"><a href="#问题-13" class="headerlink" title="问题 13"></a>问题 13</h3><p>问题 10 说了球的体积公式为 $V = \frac{4}{3}\pi r^3$。所以先求出两个球的体积分别约为 $268.082603$ 和 $4188.790667$，相加得 $4456.873270$，立方根得 $ 16.456725\cdots$，向下取整得 $ 16 $。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"16"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="问题-14"><a href="#问题-14" class="headerlink" title="问题 14"></a>问题 14</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">定价</th>
+<th style="text-align:right">报名人数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">$ \cdots $</td>
+<td style="text-align:right">$\cdots$</td>
+</tr>
+<tr>
+<td style="text-align:right">$108$</td>
+<td style="text-align:right">$12$</td>
+</tr>
+<tr>
+<td style="text-align:right">$109$</td>
+<td style="text-align:right">$11$</td>
+</tr>
+<tr>
+<td style="text-align:right">$110$</td>
+<td style="text-align:right">$10$</td>
+</tr>
+<tr>
+<td style="text-align:right">$111$</td>
+<td style="text-align:right">$9$</td>
+</tr>
+<tr>
+<td style="text-align:right">$112$</td>
+<td style="text-align:right">$8$</td>
+</tr>
+<tr>
+<td style="text-align:right">$ \cdots $</td>
+<td style="text-align:right">$\cdots$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>得到，当定价为 $ x $ 元时，报名人数为 $120 - x$ 人。这时，总共能收到 $x \times (120 - x)$ 元。我们使它等于 $ 3500 $ 即可。</p>
+<p>列方程：$x \times (120 - x) = 3500$，展开得 $ - x^2 + 120x - 3500 = 0$，利用十字相乘得<br>$\begin{cases}x_1 = 50 \ x_2 = 70\end{cases}$</p>
+<p>取较小值即 $50$。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"50"</span>);</span><br></pre></td></tr></table></figure>
+<hr>
+<p>讲完了！下面是完整代码。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> T;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; T;</span><br><span class="line">    <span class="keyword">if</span> (T == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"I love Luogu!"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (T == <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d"</span>, <span class="number">6</span>, <span class="number">4</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (T == <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n%d\n%d"</span>, <span class="number">3</span>, <span class="number">12</span>, <span class="number">2</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (T == <span class="number">4</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%.3lf"</span>, <span class="number">500</span> * <span class="number">1.0</span> / <span class="number">3</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (T == <span class="number">5</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"15"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (T == <span class="number">6</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"10.8167"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (T == <span class="number">7</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"110\n90\n0"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (T == <span class="number">8</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"31.4159\n78.5398\n523.599"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (T == <span class="number">9</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"22"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (T == <span class="number">10</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"9"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (T == <span class="number">11</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"33.3333"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (T == <span class="number">12</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"13\nR"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (T == <span class="number">13</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"16"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (T == <span class="number">14</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"50"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如有问题请在博客留言。</p>
+<p>The end.</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">xrdrsp</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://blog.xrdrsp.pw/2020/03/27/luogu-p2433/">http://blog.xrdrsp.pw/2020/03/27/luogu-p2433/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a></div><div class="post_share"><div class="social-share" data-image="https://s1.ax1x.com/2020/05/03/YS6UpR.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/03/30/luogu-p6244/"><img class="prev-cover" data-src="https://s1.ax1x.com/2020/05/03/YS6UpR.png" onerror="onerror=null;src='/null'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">[Solution] Luogu P6244</div></div></a></div><div class="next-post pull-right"><a href="/2020/03/09/Mathematics-Tools/"><img class="next-cover" data-src="https://s1.ax1x.com/2020/05/03/YS6UpR.png" onerror="onerror=null;src='/null'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Mathematics Tools</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020/04/02/codeforces-1332a/" title="[Solution] Codeforces 1332A"><img class="relatedPosts_cover" data-src="https://s1.ax1x.com/2020/05/03/YS6UpR.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 04-02-2020</div><div class="relatedPosts_title">[Solution] Codeforces 1332A</div></div></a></div><div class="relatedPosts_item"><a href="/2020/04/06/codeforces-1330a/" title="[Solution] Codeforces 1330A"><img class="relatedPosts_cover" data-src="https://s1.ax1x.com/2020/05/03/YS6UpR.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 04-06-2020</div><div class="relatedPosts_title">[Solution] Codeforces 1330A</div></div></a></div><div class="relatedPosts_item"><a href="/2020/04/09/codeforces-1333a/" title="[Solution] Codeforces 1333A"><img class="relatedPosts_cover" data-src="https://s1.ax1x.com/2020/05/03/YS6UpR.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 04-09-2020</div><div class="relatedPosts_title">[Solution] Codeforces 1333A</div></div></a></div><div class="relatedPosts_item"><a href="/2020/05/15/luogu-p1469/" title="[Solution] Luogu P1469"><img class="relatedPosts_cover" data-src="https://s1.ax1x.com/2020/05/03/YS6UpR.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 05-15-2020</div><div class="relatedPosts_title">[Solution] Luogu P1469</div></div></a></div><div class="relatedPosts_item"><a href="/2020/04/11/codeforces-1334b/" title="[Solution] Codeforces 1334B"><img class="relatedPosts_cover" data-src="https://s1.ax1x.com/2020/05/03/YS6UpR.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 04-11-2020</div><div class="relatedPosts_title">[Solution] Codeforces 1334B</div></div></a></div><div class="relatedPosts_item"><a href="/2020/03/30/luogu-p6244/" title="[Solution] Luogu P6244"><img class="relatedPosts_cover" data-src="https://s1.ax1x.com/2020/05/03/YS6UpR.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 03-30-2020</div><div class="relatedPosts_title">[Solution] Luogu P6244</div></div></a></div></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var requestSetting = function (from,set) {
+  var from = from
+  var setting = set.split(',').filter(function(item){
+  return from.indexOf(item) > -1
+  });
+  setting = setting.length == 0 ? from :setting;
+  return setting
+}
+
+var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
+var requiredFields = requestSetting(['nick','mail'],'nick,mail')
+
+window.valine = new Valine({
+  el:'#vcomment',
+  appId: 'dE9k2LvAgox0otTsmCmllREl-gzGzoHsz',
+  appKey: 'clMmQtbi1pRHyVPx80jeJEja',
+  placeholder: 'Please leave your footprints',
+  avatar: '',
+  meta: guestInfo,
+  pageSize: '10',
+  lang: 'en',
+  recordIP: true,
+  serverURLs: '',
+  emojiCDN: '//i0.hdslb.com/bfs/emote/',
+  emojiMaps: "",
+  enableQQ: false,
+  requiredFields: requiredFields
+});</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By xrdrsp</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="readmode" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font_plus" title="Increase Font Size"><i class="fas fa-plus"></i></button><button id="font_minus" title="Decrease Font Size"><i class="fas fa-minus"></i></button><button id="darkmode" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="Setting"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="scroll_to_comment fas fa-comments"></i></a><button class="close" id="mobile-toc-button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script>$(function () {
+  $('span.katex-display').wrap('<div class="katex-wrap"></div>')
+})</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/search/local-search.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body></html>
