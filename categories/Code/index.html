@@ -1,102 +1,855 @@
-<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Category: Code | Yuan Gao</title><meta name="description" content="blog"><meta name="author" content="xrdrsp"><meta name="copyright" content="xrdrsp"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://blog.xrdrsp.pw/categories/Code/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="Category: Code"><meta property="og:url" content="http://blog.xrdrsp.pw/categories/Code/"><meta property="og:site_name" content="Yuan Gao"><meta property="og:description" content="blog"><meta property="og:image" content="http://blog.xrdrsp.pw/img/avatar.png"><meta property="article:published_time" content="2020-07-22T15:04:46.040Z"><meta property="article:modified_time" content="2020-07-22T15:04:46.040Z"><meta name="twitter:card" content="summary"><script><!-- hexo-inject:begin --><!-- hexo-inject:end -->var activateDarkMode = function () {
-  document.documentElement.setAttribute('data-theme', 'dark')
-  if (document.querySelector('meta[name="theme-color"]') !== null) {
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
-  }
-}
-var activateLightMode = function () {
-  document.documentElement.setAttribute('data-theme', 'light')
-  if (document.querySelector('meta[name="theme-color"]') !== null) {
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
-  }
-}
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8" />
 
-var getCookies = function (name) {
-  const value = `; ${document.cookie}`
-  const parts = value.split(`; ${name}=`)
-  if (parts.length === 2) return parts.pop().split(';').shift()
-}
+<meta name="generator" content="Hexo 4.2.0" />
 
-var autoChangeMode = 'false'
-var t = getCookies('theme')
-if (autoChangeMode === '1') {
-  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
-  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
-  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  if (t === undefined) {
-    if (isLightMode) activateLightMode()
-    else if (isDarkMode) activateDarkMode()
-    else if (isNotSpecified || hasNoSupport) {
-      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
-      var now = new Date()
-      var hour = now.getHours()
-      var isNight = hour <= 6 || hour >= 18
-      isNight ? activateDarkMode() : activateLightMode()
+<title>Category: Code - Yuan Gao</title>
+
+
+    <meta name="description" content="blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yuan Gao">
+<meta property="og:url" content="http://blog.xrdrsp.pw/categories/Code/index.html">
+<meta property="og:site_name" content="Yuan Gao">
+<meta property="og:description" content="blog">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://blog.xrdrsp.pw/images/og_image.png">
+<meta property="article:author" content="xrdrsp">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.xrdrsp.pw/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="alternate" href="/atom.xml" title="Yuan Gao" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+<body class="is-2-column">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <!-- <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="Yuan Gao" height="28">
+            
+            </a> -->
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+                <a class="navbar-item"
+                href="/links">Links</a>
+                
+                <a class="navbar-item"
+                href="/Replys">Replys</a>
+                
+                <a class="navbar-item"
+                href="/Notifications">Notifications</a>
+                
+                <a class="navbar-item"
+                href="/mathematics">Mathematics</a>
+                
+                <a class="navbar-item"
+                href="/templates">Templates</a>
+                
+                <a class="navbar-item"
+                href="/ChangeLog">ChangeLog</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    <a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/xrdrsp">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">Categories</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">Code</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-31T16:00:00.000Z">04-01-2020</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Code/">Code</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8 minutes read (About 1241 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/04/01/codestyle/">My Code Style for OI</a>
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>本文介绍 xrdrsp 的 OI 中的代码规范。其来源主要为 <a href="https://studyingfather.blog.luogu.org/code-style">Studying Father 的代码规范</a>、<a href="https://rqy.moe/uncategorized/rqy-s-Code-Style-for-OI/">_rqy 的代码规范</a>、<a href="https://oi.men.ci/code-style-oi/">Menci 的代码规范</a></p>
+</blockquote>
+<h1 id="0-可能用到的词语解释"><a class="markdownIt-Anchor" href="#0-可能用到的词语解释"></a> 0 可能用到的词语解释</h1>
+<ul>
+<li><strong>必须</strong>：任何时候均要遵循的规范。</li>
+<li><strong>应该</strong>：绝大多数正常情况下要遵循的规范，只允许在少数特殊情形下出现例外。</li>
+<li><strong>只能</strong>：不能采用其他规范。</li>
+<li><strong>推荐</strong>：这一规范符合通行规则，正常范围下优先使用。</li>
+<li><strong>可以/允许</strong>：非强制性的规范，可以视情况实施。</li>
+<li><strong>不应/不推荐</strong>：因为不符合通行规则，而在大多数情况下不使用该规则。</li>
+<li><strong>禁止</strong>：任何时候均不能使用的规则。</li>
+</ul>
+<hr />
+<h1 id="1-编译预处理指令"><a class="markdownIt-Anchor" href="#1-编译预处理指令"></a> 1 编译预处理指令</h1>
+<ul>
+<li><code>#include</code> 语句<strong>必须</strong>置于程序开头。</li>
+<li>多个库的顺序<strong>应该</strong>遵循如下原则：首先是自定义库，接下来是 <code>C++</code> 库，最后是 <code>C</code> 库。其中 <code>C</code> 库和 <code>C++</code> 库禁止使用 <code>#include &quot;foo&quot;</code> ，而必须使用 <code>#include &lt;foo&gt;</code> 。</li>
+<li><strong>禁止</strong>使用万能头文件。</li>
+<li><code>#define</code> <strong>不推荐</strong>用于定义常量等，定义常量用 <code>const</code>。<code>#define</code> <strong>可以</strong>替代 <code>typedef</code> 等。</li>
+<li>禁止使用 <code>#define</code> 来代替函数定义，以及缩写控制性语句。</li>
+<li>所有编译预处理指令<strong>不应</strong>缩进。</li>
+</ul>
+<hr />
+<h1 id="2-代码风格"><a class="markdownIt-Anchor" href="#2-代码风格"></a> 2 代码风格</h1>
+<h2 id="21-缩进"><a class="markdownIt-Anchor" href="#21-缩进"></a> 2.1 缩进</h2>
+<ul>
+<li><strong>必须</strong>采用 $ 4 $ 格缩进，且<strong>应该</strong>使用空格代替缩进。（见下）</li>
+</ul>
+<hr />
+<h2 id="22-空格及换行"><a class="markdownIt-Anchor" href="#22-空格及换行"></a> 2.2 空格及换行</h2>
+<ul>
+<li>
+<p>花括号<strong>不应该</strong>换行。</p>
+</li>
+<li>
+<p><strong>不可以</strong>省略任何花括号，包括但不限于以下情况：</p>
+<ul>
+<li><code>if</code> 语句后只跟随一条语句。这时<strong>不可以</strong>把 <code>if</code> 语句和要执行的语句写在同一行，且遵循缩进原则，<strong>必须</strong>加上花括号。</li>
+<li><code>for</code> 或 <code>while</code> 语句内只执行一条语句，这时也<strong>必须</strong>将要执行的语句另起一行，且遵循缩进原则，<strong>必须</strong>加上花括号。</li>
+</ul>
+</li>
+<li>
+<p>以下情况<strong>必须</strong>加空格：</p>
+<ul>
+<li>双目运算符两侧。（<code>,</code> 例外，见下）</li>
+<li><code>,</code> 及 <code>;</code> 的右边（如果其不处于行尾）。</li>
+<li><code>if</code>、<code>for</code>、<code>while</code> 等控制流关键字与其后的左括号之间。</li>
+<li><code>do-while</code> 中的 <code>while</code>、<code>if-else</code> 中的 <code>else</code> 与其前面的右花括号之间。</li>
+<li><code>do-while</code> 中的 <code>do</code> 与其后的左花括号之间。</li>
+<li>结构体名与其后的左花括号之间。</li>
+<li>结构体的右花括号与结构体变量名之间。</li>
+<li>所有左大括号的左侧。（表示注释的大括号除外）</li>
+<li><code>?</code>、<code>:</code> 的两侧。</li>
+<li>类型中 <code>*</code>、<code>&amp;</code> 的左侧。（如：<code>const int &amp;a, int A(int *&amp;a)</code>）</li>
+<li>常成员函数的 <code>const</code> 两侧。</li>
+</ul>
+</li>
+<li>
+<p>以下情况<strong>禁止</strong>加空格：</p>
+<ul>
+<li>小括号及中括号与其内部的表达式或参数列表之间。</li>
+<li>函数名与左括号之间（包括声明/定义/使用）。（<code>operator</code> 与所要重载的运算符之间、运算符与参数列表之间例外，<strong>必须</strong>加空格）</li>
+<li>单目运算符（<code>!</code>、<code>-</code>、<code>*</code>、<code>&amp;</code>、<code>~</code>）之后（或自增自减运算符与其操作数之间）。</li>
+<li><code>,</code> 及 <code>;</code> 的左侧。</li>
+<li>类型中 <code>*</code>、<code>&amp;</code> 的右侧。</li>
+<li><code>.</code> 的两侧。</li>
+<li><code>operator</code> 与所要重载的运算符之间。</li>
+<li><code>-&gt;</code>、<code>::</code> 的两侧。</li>
+</ul>
+</li>
+<li>
+<p>若表达式过长内部<strong>必须</strong>换行，运算符处于行首（而非行尾）；不缩进；换行的优先级较高的子表达式也<strong>应该</strong>加括号以避免误读。</p>
+</li>
+<li>
+<p>参数列表/初始化列表过长时内部<strong>必须</strong>换行，逗号处于行尾；缩四空格。</p>
+</li>
+<li>
+<p>任何函数<strong>禁止</strong>写到一行。</p>
+</li>
+<li>
+<p>一系列常量定义的上下<strong>应该</strong>有空行。</p>
+</li>
+<li>
+<p>语句之间<strong>应该</strong>根据其意义酌情空行。</p>
+</li>
+<li>
+<p>任何位置<strong>禁止</strong>出现连续的两个（或以上）空行。</p>
+</li>
+<li>
+<p>函数或结构体等定义两侧<strong>必须</strong>有空行。</p>
+</li>
+</ul>
+<h1 id="3-例子"><a class="markdownIt-Anchor" href="#3-例子"></a> 3 例子</h1>
+<p>建议使用例子（代码来自 @Dovuq）：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">5e3</span> + <span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> M = <span class="number">3e3</span> + <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">bigint</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> num[N];</span><br><span class="line">    <span class="keyword">int</span> size;</span><br><span class="line">    bigint() &#123;</span><br><span class="line">        size = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">memset</span>(num, <span class="number">0</span>, <span class="keyword">sizeof</span>(num));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line">bigint a[M];</span><br><span class="line">bigint ans;</span><br><span class="line"></span><br><span class="line"><span class="function">bigint <span class="title">calc</span><span class="params">(bigint x, bigint y)</span></span>;</span><br><span class="line"></span><br><span class="line">istream &amp;<span class="keyword">operator</span> &gt;&gt;(istream &amp;is, bigint &amp;x) &#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    is &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (; n; i++) &#123;</span><br><span class="line">        x.num[i] = n % <span class="number">10</span>;</span><br><span class="line">        n /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    x.size = i;</span><br><span class="line">    <span class="keyword">return</span> is;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ostream &amp;<span class="keyword">operator</span> &lt;&lt;(ostream &amp;os, bigint x) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = x.size - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        os &lt;&lt; x.num[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> os;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    ans = a[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++) &#123;</span><br><span class="line">        ans = calc(ans, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">bigint <span class="title">calc</span><span class="params">(bigint x, bigint y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x.size &lt; y.size) &#123;</span><br><span class="line">        swap(x, y);</span><br><span class="line">    &#125;</span><br><span class="line">    bigint c;</span><br><span class="line">    c.size = x.size;</span><br><span class="line">    <span class="keyword">int</span> d = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; x.size; i++) &#123;</span><br><span class="line">        c.num[i] += x.num[i] + y.num[i] + d;</span><br><span class="line">        d = (c.num[i] &lt; <span class="number">7</span> ? <span class="number">0</span> : (c.num[i] &lt; <span class="number">14</span> ? <span class="number">1</span> : <span class="number">2</span>));</span><br><span class="line">        c.num[i] %= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (d) &#123;</span><br><span class="line">        c.num[c.size++] = d;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left is-sticky">
+    
+        
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                <!--
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="" src="/images/avatar.png" alt="xrdrsp">
+                --> 
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        xrdrsp
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        xrdrsp@outlook.com
+                    </p>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <a href="/archives">
+                        <p class="title has-text-weight-normal">
+                            17
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <a href="/categories">
+                        <p class="title has-text-weight-normal">
+                            7
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <a href="/tags">
+                        <p class="title has-text-weight-normal">
+                            11
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/xrdrsp" target="_blank" rel="noopener">
+                Follow</a>
+        </div>
+        
+        
+        
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">9</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">January 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Code/">
+            <span class="level-start">
+                <span class="level-item">Code</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/DailyLife/">
+            <span class="level-start">
+                <span class="level-item">DailyLife</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Mathematics/">
+            <span class="level-start">
+                <span class="level-item">Mathematics</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Mathematics/Tools/">
+            <span class="level-start">
+                <span class="level-item">Tools</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li><li>
+        <a class="level is-marginless" href="/categories/Solution/">
+            <span class="level-start">
+                <span class="level-item">Solution</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">13</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Solution/Codeforces/">
+            <span class="level-start">
+                <span class="level-item">Codeforces</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">7</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Solution/Luogu/">
+            <span class="level-start">
+                <span class="level-item">Luogu</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">6</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Tricky/">
+                        <span class="tag">Tricky</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">
+                        <span class="tag">位运算</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E5%B7%A5%E5%85%B7/">
+                        <span class="tag">工具</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E6%8E%92%E5%BA%8F/">
+                        <span class="tag">排序</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E6%95%B0%E5%AD%A6/">
+                        <span class="tag">数学</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E6%9E%9A%E4%B8%BE/">
+                        <span class="tag">枚举</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E6%A8%A1%E6%8B%9F/">
+                        <span class="tag">模拟</span>
+                        <span class="tag is-grey">5</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E7%94%9F%E6%B4%BB/">
+                        <span class="tag">生活</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E8%AF%AD%E6%B3%95/">
+                        <span class="tag">语法</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E8%B4%AA%E5%BF%83/">
+                        <span class="tag">贪心</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E9%A2%98%E8%A7%A3/">
+                        <span class="tag">题解</span>
+                        <span class="tag is-grey">13</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/Tricky/" style="font-size: 13.33px;">Tricky</a> <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" style="font-size: 10px;">位运算</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">工具</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 10px;">排序</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 13.33px;">数学</a> <a href="/tags/%E6%9E%9A%E4%B8%BE/" style="font-size: 10px;">枚举</a> <a href="/tags/%E6%A8%A1%E6%8B%9F/" style="font-size: 16.67px;">模拟</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 13.33px;">生活</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 13.33px;">语法</a> <a href="/tags/%E8%B4%AA%E5%BF%83/" style="font-size: 10px;">贪心</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 20px;">题解</a>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://dovuq.github.io" target="_blank" rel="noopener">
+                    <span class="level-left">
+                        <span class="level-item">Dovuq</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">dovuq.github.io</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen is-sticky">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="Yuan Gao" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 xrdrsp&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/xrdsrp">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+<script>
+var IcarusThemeSettings = {
+    site: {
+        url: 'http://blog.xrdrsp.pw',
+        external_link: {"enable":true,"exclude":[]}
+    },
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'folded'
+        }
     }
-    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-      if (Cookies.get('theme') === undefined) {
-        e.matches ? activateDarkMode() : activateLightMode()
-      }
-    })
-  } else if (t === 'light') activateLightMode()
-  else activateDarkMode()
-} else if (autoChangeMode === '2') {
-  now = new Date()
-  hour = now.getHours()
-  isNight = hour <= 6 || hour >= 18
-  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
-  else if (t === 'light') activateLightMode()
-  else activateDarkMode()
-} else {
-  if (t === 'dark') activateDarkMode()
-  else if (t === 'light') activateLightMode()
-}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
-  translate: undefined,
-  copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
-  },
-  bookmark: {
-    message_prev: 'Press',
-    message_next: 'to bookmark this page'
-  },
-  runtime_unit: 'days',
-  runtime: false,
-  copyright: undefined,
-  ClickShowText: undefined,
-  medium_zoom: false,
-  fancybox: true,
-  Snackbar: undefined,
-  justifiedGallery: {
-    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-  },
-  baiduPush: false,
-  highlightCopy: true,
-  highlightLang: true,
-  isPhotoFigcaption: false,
-  islazyload: true,
-  isanchor: false    
-}</script><script>var GLOBAL_CONFIG_SITE = { 
-  isPost: false,
-  isHome: false,
-  isHighlightShrink: false,
-  isSidebar: false
-  }</script><noscript><style>
-#nav {
-  opacity: 1
-}
-.justified-gallery img{
-  opacity: 1
-}
-</style></noscript><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Yuan Gao" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='null'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">17</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">11</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/discussion/"><i class="fa-fw fa fa-comment"></i><span> Discussion</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="https://xrdrsp.pw" target="_blank" rel="noopener"><span> xrdrsp.pw</span></a></li><li><a class="site-page" href="/"><span> Blog</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="not-index-bg" id="page-header" style="background-image: url(https://s1.ax1x.com/2020/05/03/YS6UpR.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Yuan Gao</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/discussion/"><i class="fa-fw fa fa-comment"></i><span> Discussion</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="https://xrdrsp.pw" target="_blank" rel="noopener"><span> xrdrsp.pw</span></a></li><li><a class="site-page" href="/"><span> Blog</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="page_site-info"><h1 id="site_title">Code</h1></div></header><main class="layout_page" id="content-inner"><div id="category"><div class="article-sort-title">Category - Code</div><div class="article-sort"><div class="article-sort-item year">2020</div><div class="article-sort-item no-article-cover"><div class="article-sort-post"><a class="article-sort-item__post" href="/2020/04/01/codestyle/"><i class="far fa-calendar-alt"></i><time class="article-sort-item__time" title="Created 04-01-2020 00:00:00">04-01-2020</time><div class="article-sort-item__title">My Code Style for OI</div></a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png" onerror="this.onerror=null;this.src='/null'" alt="avatar"/><div class="author-info__name">xrdrsp</div><div class="author-info__description">An OIer from Ningbo, China</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">Articles</div><div class="length_num">17</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">Tags</div><div class="length_num">11</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">Categories</div><div class="length_num">7</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="Bookmark"><i class="fas fa-bookmark"></i><span>Bookmark</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xrdrsp" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xrdrsp@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is xrdrsp's Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/2020/07/22/codeforces-1382b/"><div class="aside-post-title no-aside-cover"><div class="aside-post_title" href="/2020/07/22/codeforces-1382b/" title="[Solution] Codeforces 1382B - Sequential Nim">[Solution] Codeforces 1382B - Sequential Nim</div><time class="aside-post_meta post-meta__date" title="Created 07-22-2020 21:07:00">07-22-2020</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/19/codeforces-1372a/"><div class="aside-post-title no-aside-cover"><div class="aside-post_title" href="/2020/07/19/codeforces-1372a/" title="[Solution] Codeforces 1372A - Omkar and Completion">[Solution] Codeforces 1372A - Omkar and Completion</div><time class="aside-post_meta post-meta__date" title="Created 07-19-2020 00:00:00">07-19-2020</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/19/codeforces-1385b/"><div class="aside-post-title no-aside-cover"><div class="aside-post_title" href="/2020/07/19/codeforces-1385b/" title="[Solution] Codeforces 1385B - Restore the Permutation by Merger">[Solution] Codeforces 1385B - Restore the Permutation by Merger</div><time class="aside-post_meta post-meta__date" title="Created 07-19-2020 00:00:00">07-19-2020</time></div></a></div><div class="aside-recent-post"><a href="/2020/05/15/luogu-p1469/"><div class="aside-post-title no-aside-cover"><div class="aside-post_title" href="/2020/05/15/luogu-p1469/" title="[Solution] Luogu P1469">[Solution] Luogu P1469</div><time class="aside-post_meta post-meta__date" title="Created 05-15-2020 00:00:00">05-15-2020</time></div></a></div><div class="aside-recent-post"><a href="/2020/04/19/luogu-p6402/"><div class="aside-post-title no-aside-cover"><div class="aside-post_title" href="/2020/04/19/luogu-p6402/" title="[Solution] Luogu P6402">[Solution] Luogu P6402</div><time class="aside-post_meta post-meta__date" title="Created 04-19-2020 00:00:00">04-19-2020</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>Categories</span></div><ul class="card-category-list">
-            <!-- hexo-inject:begin --><!-- hexo-inject:end --><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Code/"><span class="card-category-list-name">Code</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/DailyLife/"><span class="card-category-list-name">DailyLife</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Mathematics/"><span class="card-category-list-name">Mathematics</span><span class="card-category-list-count">2</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Mathematics/Tools/"><span class="card-category-list-name">Tools</span><span class="card-category-list-count">1</span></a></li></ul><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Solution/"><span class="card-category-list-name">Solution</span><span class="card-category-list-count">13</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Solution/Codeforces/"><span class="card-category-list-name">Codeforces</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Solution/Luogu/"><span class="card-category-list-name">Luogu</span><span class="card-category-list-count">6</span></a></li></ul>
-                       
-            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/Tricky/" style="font-size: 18px; color: #999ea6">Tricky</a> <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" style="font-size: 16px; color: #999">位运算</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 16px; color: #999">工具</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 16px; color: #999">排序</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 18px; color: #999ea6">数学</a> <a href="/tags/%E6%9E%9A%E4%B8%BE/" style="font-size: 16px; color: #999">枚举</a> <a href="/tags/%E6%A8%A1%E6%8B%9F/" style="font-size: 20px; color: #99a4b2">模拟</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 18px; color: #999ea6">生活</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 18px; color: #999ea6">语法</a> <a href="/tags/%E8%B4%AA%E5%BF%83/" style="font-size: 16px; color: #999">贪心</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 22px; color: #99a9bf">题解</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">07-2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">05-2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">04-2020</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/03/"><span class="card-archive-list-date">03-2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">01-2020</span><span class="card-archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">Article :</div><div class="webinfo-article-count">17</div></div><div class="webinfo-item"><div class="webinfo-site-wordcount-name">Total Count :</div><div class="webinfo-site-wordcount">13.6k</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">UV :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">PV :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By xrdrsp</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="darkmode" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="Setting"><i class="fas fa-cog"></i></button><button id="go-up" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/search/local-search.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body></html>
+};
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+
+
+<script src="/js/animation.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.js" defer></script>
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
