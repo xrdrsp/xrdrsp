@@ -110,8 +110,8 @@ if (autoChangeMode === '1') {
   return setting
 }
 
-var guestInfo = requestSetting(['nick','mail','link'],'nick,mail(optional),link(optional)')
-var requiredFields = requestSetting(['nick','mail'],'nick')
+var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
+var requiredFields = requestSetting(['nick','mail'],'nick,mail')
 
 window.valine = new Valine({
   el:'#vcomment',
