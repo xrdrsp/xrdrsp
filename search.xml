@@ -966,10 +966,10 @@ Y 坐标, 从: <input id="ymin" name="ymin" value="-1" size="10" type="text">
 <h2 id="极限及微积分"><a href="#极限及微积分" class="headerlink" title="极限及微积分"></a>极限及微积分</h2><ul>
 <li>$\lim \limits_{x \rightarrow0} \dfrac{\sin x}x=1$</li>
 <li>$\lim \limits_{x \rightarrow \infty}(1+ \dfrac 1x)^x=e$</li>
-<li>$\lim \limits<em>{x \rightarrow x_0} (f(x) \pm g(x))= \lim \limits</em>{x \rightarrow x<em>0}f(x) \pm \lim \limits</em>{x \rightarrow x_0}g(x)$</li>
-<li>$\lim \limits<em>{x \rightarrow x_0}(f(x)g(x))=\lim \limits</em>{x \rightarrow x<em>0}f(x)\times \lim \limits</em>{x \rightarrow x_0}g(x)$</li>
-<li>$\lim \limits<em>{x \rightarrow x_0} \dfrac{f(x)}{g(x)}=\dfrac{\lim \limits</em>{x \rightarrow x<em>0}f(x)}{\lim \limits</em>{x \rightarrow x<em>0}g(x)}(\lim \limits</em>{x \rightarrow x_0}g(x)\neq0)$</li>
-<li>$\lim \limits<em>{x \rightarrow x_0}f(x)^n=[\lim \limits</em>{x \rightarrow x_0}f(x)]^n$</li>
+<li>$\lim \limits_{x \rightarrow x_0} (f(x) \pm g(x))= \lim \limits_{x \rightarrow x_0}f(x) \pm \lim \limits_{x \rightarrow x_0}g(x)$</li>
+<li>$\lim \limits_{x \rightarrow x_0}(f(x)g(x))=\lim \limits_{x \rightarrow x_0}f(x)\times \lim \limits_{x \rightarrow x_0}g(x)$</li>
+<li>$\lim \limits_{x \rightarrow x_0} \dfrac{f(x)}{g(x)}=\dfrac{\lim \limits_{x \rightarrow x_0}f(x)}{\lim \limits_{x \rightarrow x_0}g(x)}(\lim \limits_{x \rightarrow x_0}g(x)\neq0)$</li>
+<li>$\lim \limits_{x \rightarrow x_0}f(x)^n=[\lim \limits_{x \rightarrow x_0}f(x)]^n$</li>
 <li>$a’=0$</li>
 <li>$(x^a)’=ax^{a-1}(a\neq0)$</li>
 <li>$(a^x)’=a^x\ln a$</li>
