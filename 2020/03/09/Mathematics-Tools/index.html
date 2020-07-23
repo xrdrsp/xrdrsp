@@ -394,7 +394,7 @@ Y 坐标, 从: <input id="ymin" name="ymin" value="-1" size="10" type="text">
   return setting
 }
 
-var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
+var guestInfo = requestSetting(['nick','mail','link'],'nick,mail(optional),link(optional)')
 var requiredFields = requestSetting(['nick','mail'],'nick')
 
 window.valine = new Valine({
