@@ -71,6 +71,34 @@
   </entry>
   
   <entry>
+    <title>[Solution] Codeforces 1372A - Omkar and Completion</title>
+    <link href="http://blog.xrdrsp.pw/2020/07/19/codeforces-1372a/"/>
+    <id>http://blog.xrdrsp.pw/2020/07/19/codeforces-1372a/</id>
+    <published>2020-07-18T16:00:00.000Z</published>
+    <updated>2020-07-22T15:28:32.463Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Main-Idea"><a href="#Main-Idea" class="headerlink" title="Main Idea"></a>Main Idea</h1><p>给你一个整数 $n$，尝试找出任意一个长度为 $n$ 的”完整“的数组 $a$。如果一个数组所有的元素都是整数、都不超过 $1000$，而且对于下标 $x, y, z$，满足：</p><script type="math/tex; mode=display">a_x + a_y \neq a_z</script><p>则这个数组被称为”完整“的数组。</p><h1 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h1><p>我们很容易地发现，暴力地枚举所有可能是不可行的。而 CF div.2 的第一题一般不考察算法。对于这一题，您可以找到通过某种方法找到的满足任何条件的解。这样比较方便且省时间。</p><p>若 $a$ 中所有元素都相等， 即 $a_1 = a_2 = \cdots = a_n$。这时，对于任意三个下标 $p, q, r$，$a_p + a_q = 2a_p = 2a_q \neq a_r$。（正整数）</p><p>所以如果我们把数组中所有数都赋值成不大于 $1000$ 的数，问题解决了！</p><h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (t--) &#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; x;                  <span class="comment">// 输入</span></span><br><span class="line">        <span class="keyword">while</span> (x--) &#123;</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"1 "</span>;          <span class="comment">// 输出同样的值可以保证满足条件。</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Main-Idea&quot;&gt;&lt;a href=&quot;#Main-Idea&quot; class=&quot;headerlink&quot; title=&quot;Main Idea&quot;&gt;&lt;/a&gt;Main Idea&lt;/h1&gt;&lt;p&gt;给你一个整数 $n$，尝试找出任意一个长度为 $n$ 的”完整“的数组 $a$。如果
+      
+    
+    </summary>
+    
+    
+      <category term="Solution" scheme="http://blog.xrdrsp.pw/categories/Solution/"/>
+    
+      <category term="Codeforces" scheme="http://blog.xrdrsp.pw/categories/Solution/Codeforces/"/>
+    
+    
+      <category term="题解" scheme="http://blog.xrdrsp.pw/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[Solution] Codeforces 1385B - Restore the Permutation by Merger</title>
     <link href="http://blog.xrdrsp.pw/2020/07/19/codeforces-1385b/"/>
     <id>http://blog.xrdrsp.pw/2020/07/19/codeforces-1385b/</id>
@@ -97,34 +125,6 @@
       <category term="题解" scheme="http://blog.xrdrsp.pw/tags/%E9%A2%98%E8%A7%A3/"/>
     
       <category term="模拟" scheme="http://blog.xrdrsp.pw/tags/%E6%A8%A1%E6%8B%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Solution] Codeforces 1372A - Omkar and Completion</title>
-    <link href="http://blog.xrdrsp.pw/2020/07/19/codeforces-1372a/"/>
-    <id>http://blog.xrdrsp.pw/2020/07/19/codeforces-1372a/</id>
-    <published>2020-07-18T16:00:00.000Z</published>
-    <updated>2020-07-22T15:28:32.463Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Main-Idea"><a href="#Main-Idea" class="headerlink" title="Main Idea"></a>Main Idea</h1><p>给你一个整数 $n$，尝试找出任意一个长度为 $n$ 的”完整“的数组 $a$。如果一个数组所有的元素都是整数、都不超过 $1000$，而且对于下标 $x, y, z$，满足：</p><script type="math/tex; mode=display">a_x + a_y \neq a_z</script><p>则这个数组被称为”完整“的数组。</p><h1 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h1><p>我们很容易地发现，暴力地枚举所有可能是不可行的。而 CF div.2 的第一题一般不考察算法。对于这一题，您可以找到通过某种方法找到的满足任何条件的解。这样比较方便且省时间。</p><p>若 $a$ 中所有元素都相等， 即 $a_1 = a_2 = \cdots = a_n$。这时，对于任意三个下标 $p, q, r$，$a_p + a_q = 2a_p = 2a_q \neq a_r$。（正整数）</p><p>所以如果我们把数组中所有数都赋值成不大于 $1000$ 的数，问题解决了！</p><h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (t--) &#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; x;                  <span class="comment">// 输入</span></span><br><span class="line">        <span class="keyword">while</span> (x--) &#123;</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"1 "</span>;          <span class="comment">// 输出同样的值可以保证满足条件。</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Main-Idea&quot;&gt;&lt;a href=&quot;#Main-Idea&quot; class=&quot;headerlink&quot; title=&quot;Main Idea&quot;&gt;&lt;/a&gt;Main Idea&lt;/h1&gt;&lt;p&gt;给你一个整数 $n$，尝试找出任意一个长度为 $n$ 的”完整“的数组 $a$。如果
-      
-    
-    </summary>
-    
-    
-      <category term="Solution" scheme="http://blog.xrdrsp.pw/categories/Solution/"/>
-    
-      <category term="Codeforces" scheme="http://blog.xrdrsp.pw/categories/Solution/Codeforces/"/>
-    
-    
-      <category term="题解" scheme="http://blog.xrdrsp.pw/tags/%E9%A2%98%E8%A7%A3/"/>
     
   </entry>
   
