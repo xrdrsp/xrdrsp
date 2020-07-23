@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.xrdrsp.pw/"/>
-  <updated>2020-07-23T04:59:05.075Z</updated>
+  <updated>2020-07-23T05:00:40.522Z</updated>
   <id>http://blog.xrdrsp.pw/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://blog.xrdrsp.pw/2021/01/01/latex/"/>
     <id>http://blog.xrdrsp.pw/2021/01/01/latex/</id>
     <published>2020-12-31T16:00:00.000Z</published>
-    <updated>2020-07-23T04:59:05.075Z</updated>
+    <updated>2020-07-23T05:00:40.522Z</updated>
     
-    <content type="html"><![CDATA[<p>$\color{red}text$</p><p>$\text{TEXT}$</p>]]></content>
+    <content type="html"><![CDATA[<p>$\color{red}{text}$</p><p>$\text{TEXT}$</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;$\color{red}text$&lt;/p&gt;
+        &lt;p&gt;$\color{red}{text}$&lt;/p&gt;
 &lt;p&gt;$\text{TEXT}$&lt;/p&gt;
 
       

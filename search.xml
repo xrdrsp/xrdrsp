@@ -3,7 +3,7 @@
   <entry>
     <title>latex</title>
     <url>/2021/01/01/latex/</url>
-    <content><![CDATA[<p>$\color{red}text$</p>
+    <content><![CDATA[<p>$\color{red}{text}$</p>
 <p>$\text{TEXT}$</p>
 ]]></content>
   </entry>
