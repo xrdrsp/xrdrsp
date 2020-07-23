@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.xrdrsp.pw/"/>
-  <updated>2020-07-23T11:13:07.770Z</updated>
+  <updated>2020-07-22T13:18:21.631Z</updated>
   <id>http://blog.xrdrsp.pw/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>latex</title>
-    <link href="http://blog.xrdrsp.pw/2021/01/01/latex/"/>
-    <id>http://blog.xrdrsp.pw/2021/01/01/latex/</id>
-    <published>2020-12-31T16:00:00.000Z</published>
-    <updated>2020-07-23T11:13:07.770Z</updated>
-    
-    <content type="html"><![CDATA[<p>$\color{red}{text}$</p><p>$\text{Dovuq神}$</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;$\color{red}{text}$&lt;/p&gt;
-&lt;p&gt;$\text{Dovuq神}$&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>[Solution] Codeforces 1382B - Sequential Nim</title>

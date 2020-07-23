@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>latex</title>
-    <url>/2021/01/01/latex/</url>
-    <content><![CDATA[<p>$\color{red}{text}$</p>
-<p>$\text{Dovuq神}$</p>
-]]></content>
-  </entry>
-  <entry>
     <title>[Solution] Codeforces 1382B - Sequential Nim</title>
     <url>/2020/07/22/codeforces-1382b/</url>
     <content><![CDATA[<h1 id="Main-Idea"><a href="#Main-Idea" class="headerlink" title="Main Idea"></a>Main Idea</h1><p>有 $n$ 堆石子，第 $i$ 堆拥有 $A(i)$ 个石子。两个人轮流从当前第一个个数不为零的堆里拿出若干（正数）石子，那个每石子拿的人就输了。</p>
