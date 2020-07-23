@@ -395,7 +395,7 @@ Y 坐标, 从: <input id="ymin" name="ymin" value="-1" size="10" type="text">
 }
 
 var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
-var requiredFields = requestSetting(['nick','mail'],'nick,mail')
+var requiredFields = requestSetting(['nick','mail'],'nick')
 
 window.valine = new Valine({
   el:'#vcomment',
@@ -408,7 +408,7 @@ window.valine = new Valine({
   lang: 'en',
   recordIP: true,
   serverURLs: '',
-  emojiCDN: 'https://i0.hdslb.com/bfs/emote/',
+  emojiCDN: '//i0.hdslb.com/bfs/emote/',
   emojiMaps: "",
   enableQQ: false,
   requiredFields: requiredFields
