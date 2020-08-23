@@ -213,7 +213,7 @@ a_x + a_y \neq a_z</script><p>则这个数组被称为”完整“的数组。</
     <title>[Solution] Codeforces 1333A</title>
     <url>/2020/04/09/codeforces-1333a/</url>
     <content><![CDATA[<p>本题是一个规律题。手玩几个样例以后能发现一些有意思的东西。比如对于 $n$、$m$ 任意的图，都有一种固定的选取方法可以满足条件。比如这个：</p>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/9odlxf6i.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://cdn.luogu.com.cn/upload/image_hosting/9odlxf6i.png" alt=""></p>
 <p>图中黑色格子表示被染黑的部分，白色格子表示白色部分。（废话）</p>
 <p>数字表示计数。即<strong>在 $6 \times 6$ 的方格里，只需要把 $i = 1$ <em>或</em> $j = 1$ 的格子染黑，就是一个合法的方案了。</strong>（注意：$(1, 1)$（左上角的格子）不算。）</p>
 <p>对于 $n$、$m$ 任意的图也一样。读者可以自己画画看。</p>

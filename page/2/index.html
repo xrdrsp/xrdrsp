@@ -1,1496 +1,174 @@
-<!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="en">
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu:300,300italic,400,400italic,700,700italic|Ubuntu Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="xrdrsp" />
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="Yuan Gao" type="application/atom+xml" />
-
-
-
-
-
-
-<meta name="description" content="blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yuan Gao">
-<meta property="og:url" content="http://blog.xrdrsp.pw/page/2/index.html">
-<meta property="og:site_name" content="Yuan Gao">
-<meta property="og:description" content="blog">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="xrdrsp">
-<meta name="twitter:card" content="summary">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":10,"b2t":true,"scrollpercent":true,"onmobile":true},
-    fancybox: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Yuan Gao</title><meta name="description" content="blog"><meta name="author" content="xrdrsp,xrdrsp@outlook.com"><meta name="copyright" content="xrdrsp"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://blog.xrdrsp.pw/page/2/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="Yuan Gao"><meta property="og:url" content="http://blog.xrdrsp.pw/page/2/"><meta property="og:site_name" content="Yuan Gao"><meta property="og:description" content="blog"><meta property="og:image" content="http://blog.xrdrsp.pw/img/avatar.png"><meta property="article:published_time" content="2020-08-23T04:31:53.197Z"><meta property="article:modified_time" content="2020-08-23T04:31:53.197Z"><meta name="twitter:card" content="summary"><script><!-- hexo-inject:begin --><!-- hexo-inject:end -->var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
     }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://blog.xrdrsp.pw/page/2/"/>
-
-
-
-
-
-  <title>Yuan Gao</title>
-  
-
-
-
-
-
-
-
-
-<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
-
-  
-  
-    
-  
-
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Yuan Gao</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            About
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-links">
-          <a href="/links/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-links"></i> <br />
-            
-            Links
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-replys">
-          <a href="/Replys/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-Replys"></i> <br />
-            
-            Replys
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-notifications">
-          <a href="/Notifications/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-Notifications"></i> <br />
-            
-            Notifications
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-mathematics">
-          <a href="/mathematics/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-Mathematics"></i> <br />
-            
-            Mathematics
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-templates">
-          <a href="/templates/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-Templates"></i> <br />
-            
-            Templates
-          </a>
-        </li>
-      
-
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            Search
-          </a>
-        </li>
-      
-    </ul>
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="Searching..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.xrdrsp.pw/2020/04/04/%E4%B8%BA%E5%91%8A%E5%88%AB%E7%BA%AA%E5%BF%B5%EF%BC%8C%E4%B8%BA%E8%B4%A3%E4%BB%BB%E5%89%8D%E8%A1%8C.md/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xrdrsp">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan Gao">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/04/%E4%B8%BA%E5%91%8A%E5%88%AB%E7%BA%AA%E5%BF%B5%EF%BC%8C%E4%B8%BA%E8%B4%A3%E4%BB%BB%E5%89%8D%E8%A1%8C.md/" itemprop="url">为告别纪念，为责任前行</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-04T00:00:00+08:00">
-                04-04-2020
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Post modified&#58;</span>
-              
-              <time title="Post modified" itemprop="dateModified" datetime="2020-07-02T15:42:59+08:00">
-                07-02-2020
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/DailyLife/" itemprop="url" rel="index">
-                    <span itemprop="name">DailyLife</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  1.1k
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          我们在这个冬天所经历的一切，是悲伤的记忆，是告别亲人的不舍，也是坚定抗争中生命的顽强与不屈。带着逝者的遗志，我们不会被轻易击垮。严冬之后，必有万物复苏，必有夏花烂漫。
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Yuan Gao" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='null'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">17</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">11</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/discussion/"><i class="fa-fw fa fa-comment"></i><span> Discussion</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="https://xrdrsp.pw" target="_blank" rel="noopener"><span> xrdrsp.pw</span></a></li><li><a class="site-page" href="/"><span> Blog</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://s1.ax1x.com/2020/05/03/YS6UpR.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Yuan Gao</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/discussion/"><i class="fa-fw fa fa-comment"></i><span> Discussion</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="https://xrdrsp.pw" target="_blank" rel="noopener"><span> xrdrsp.pw</span></a></li><li><a class="site-page" href="/"><span> Blog</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Yuan Gao</h1><div id="site_subtitle"><span id="subtitle"></span></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page hide-aside" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/04/%E4%B8%BA%E5%91%8A%E5%88%AB%E7%BA%AA%E5%BF%B5%EF%BC%8C%E4%B8%BA%E8%B4%A3%E4%BB%BB%E5%89%8D%E8%A1%8C.md/" title="为告别纪念，为责任前行">为告别纪念，为责任前行</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 04-04-2020 00:00:00"><i class="far fa-calendar-alt"></i>04-04-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/DailyLife/">DailyLife</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%94%9F%E6%B4%BB/">生活</a></span></div><div class="content"><!-- hexo-inject:begin --><!-- hexo-inject:end -->我们在这个冬天所经历的一切，是悲伤的记忆，是告别亲人的不舍，也是坚定抗争中生命的顽强与不屈。带着逝者的遗志，我们不会被轻易击垮。严冬之后，必有万物复苏，必有夏花烂漫。
 不觉间，将是清明。
-对人们而言，刚刚过去的这个冬天，似乎格外漫长。突如其来的新冠肺炎疫情，让中国社会与公众的生活进入了暂停状态。壮士
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/04/%E4%B8%BA%E5%91%8A%E5%88%AB%E7%BA%AA%E5%BF%B5%EF%BC%8C%E4%B8%BA%E8%B4%A3%E4%BB%BB%E5%89%8D%E8%A1%8C.md/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.xrdrsp.pw/2020/04/02/codeforces-1332a/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xrdrsp">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan Gao">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/02/codeforces-1332a/" itemprop="url">[Solution] Codeforces 1332A</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-02T00:00:00+08:00">
-                04-02-2020
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Post modified&#58;</span>
-              
-              <time title="Post modified" itemprop="dateModified" datetime="2020-07-22T21:17:58+08:00">
-                07-22-2020
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Solution/" itemprop="url" rel="index">
-                    <span itemprop="name">Solution</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Solution/Codeforces/" itemprop="url" rel="index">
-                    <span itemprop="name">Codeforces</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  388
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          这是本人的第 $003$ 篇题解。
+对人们而言，刚刚过去的这个冬天，似乎格外漫长。突如其来的新冠肺炎疫情，让中国社会与公众的生活进入了暂停状态。壮士断腕般的“封城”举措，“全国一盘棋”式的公共卫生动员，加上史无前例的大规模隔离行动，让我们带着与病毒抗争到底的决心，度过了一段艰难时光。
+春分已过，清明悄然到来。在疫情影响下，这个遥寄哀思、悼亡怀人的日子，也因此有了一层格外沉重的特殊涵义。新冠病毒夺去很多人的生命，让很多家庭痛失父母、爱人、子女。更有一些医务工作者和抗疫工作人员，为此而殉职牺牲。那许许多多的面容和身影，永远定格在了2020年初春。
+我们为逝者点燃烛光，俯身鞠躬，遥寄一份哀悼和思念。在英雄的城市、英雄的人民、英雄的逆行者背后，是一个个鲜活生动的人，是一段段有着欢笑泪水的故事，他们的悲痛，他们的哀伤，他们的抗争，他们的不屈，都值得铭记。
+那不只是一个数字，一个名字，一块碑。每一个逝者的过往，都是生者的哀思。疫情防控的特殊时刻，许 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/02/codeforces-1332a/" title="[Solution] Codeforces 1332A">[Solution] Codeforces 1332A</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 04-02-2020 00:00:00"><i class="far fa-calendar-alt"></i>04-02-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Solution/">Solution</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/Solution/Codeforces/">Codeforces</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Tricky/">Tricky</a></span></div><div class="content">这是本人的第 $003$ 篇题解。
 这个题作为 CF div.2 T1，还是比较水的（我比较菜）。
 数据范围 $10^8$，暴力搜索肯定不行。
 这时就要想一些省时间的方法了。
 首先，可以模拟样例找规律。
-可以发现，只要小猫有足够的活动空间（走完要求的路线之后还在区域内）就不会走丢。且小猫至少有 $1
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/02/codeforces-1332a/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.xrdrsp.pw/2020/04/01/codestyle/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xrdrsp">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan Gao">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/01/codestyle/" itemprop="url">My Code Style for OI</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-01T00:00:00+08:00">
-                04-01-2020
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Post modified&#58;</span>
-              
-              <time title="Post modified" itemprop="dateModified" datetime="2020-08-20T12:27:17+08:00">
-                08-20-2020
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Code/" itemprop="url" rel="index">
-                    <span itemprop="name">Code</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  1.2k
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
+可以发现，只要小猫有足够的活动空间（走完要求的路线之后还在区域内）就不会走丢。且小猫至少有 $1\times1$ 的空间（除非不需要走路）。
+所以就可以写代码了。
+12345678910111213141516171819202122232425262728#include &lt;cstdio&gt;#include &lt;cstring&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;using namespace std;int main() &#123;    int T;    cin &gt;&gt; T;    while (T--) &#123;        int l, r, d, u; 			// 左、右、下、上。        int x, y, x1, x2, y1, y2;	// 小猫位置坐标和两 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/04/01/codestyle/" title="My Code Style for OI">My Code Style for OI</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 04-01-2020 00:00:00"><i class="far fa-calendar-alt"></i>04-01-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Code/">Code</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%94%9F%E6%B4%BB/">生活</a></span></div><div class="content">
 本文介绍 xrdrsp 的 OI 中的代码规范。其来源主要为 Studying Father 的代码规范、_rqy 的代码规范、Menci 的代码规范
 
 0 可能用到的词语解释
 必须：任何时候均要遵循的规范。
 应该：绝大多数正常情况下要遵循的规范，只允许在少数特殊情形下出现例外。
-只能：不能采用其
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/04/01/codestyle/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
+只能：不能采用其他规范。
+推荐：这一规范符合通行规则，正常范围下优先使用。
+可以/允许：非强制性的规范，可以视情况实施。
+不应/不推荐：因为不符合通行规则，而在大多数情况下不使用该规则。
+禁止：任何时候均不能使用的规则。
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.xrdrsp.pw/2020/03/30/luogu-p6244/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xrdrsp">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan Gao">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/30/luogu-p6244/" itemprop="url">[Solution] Luogu P6244</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-30T00:00:00+08:00">
-                03-30-2020
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Post modified&#58;</span>
-              
-              <time title="Post modified" itemprop="dateModified" datetime="2020-07-22T21:17:55+08:00">
-                07-22-2020
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Solution/" itemprop="url" rel="index">
-                    <span itemprop="name">Solution</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Solution/Luogu/" itemprop="url" rel="index">
-                    <span itemprop="name">Luogu</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  1.1k
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          这是本人的第 $002$ 篇题解。
+1 编译预处理指令
+#include 语句推荐置于程序开头。
+多个库的顺序应该遵循如下原则：首先是自定义库，接下来是 C++ 库，最后是 C 库。其中 C 库和 C++ 库禁止使用 #include &quot;foo&quot; ，而必须使用 #include &lt;foo&gt; 。
+禁止使用万能头文件。
+#define 不推荐用于定义常量等，定义常量用 const。#define 可以替代 typedef 等。
+禁止使用 #define 来代替函数定义，以及缩写控制性语句。
+所 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/03/30/luogu-p6244/" title="[Solution] Luogu P6244">[Solution] Luogu P6244</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 03-30-2020 00:00:00"><i class="far fa-calendar-alt"></i>03-30-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Solution/">Solution</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/Solution/Luogu/">Luogu</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a></span></div><div class="content">这是本人的第 $002$ 篇题解。
 
 1 题意简述有 $n$ 个事件，要求在时间不冲突的情况下完成尽量多的事件。（完成一个事件后可以立即开始下一个事件。）
 2 思路分析这道题就是个贪心题。
-贪心，是一种仅考虑当前决策、不顾全大局的思想，与 DP（动态规划）正好相反。正因为如此，许多贪心代码很短，许多
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/03/30/luogu-p6244/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
+贪心，是一种仅考虑当前决策、不顾全大局的思想，与 DP（动态规划）正好相反。正因为如此，许多贪心代码很短，许多贪心代码都是错的。
+在这道题上，我们该根据什么贪心呢？下面有几个选择，我们需要选出正确的。判别贪心正确与否的方法是找反例和证明。
 
-    
+先做早开始的事件。
+先做持续时间短的事件。
+先做早结束的事件。
 
-    
+或许你认为还有别的可能性，但这里只列举 $3$ 个。
+下面是这三种贪心的证明过程。
+2.1 先做早开始的事件表面看看很正确，但如果一个事件开始的时间很早，而持续时间很长，那这个算法就爆炸了。举出反例：
+输入：
+123431 1002 13 1
 
-    
+正确的输出：
+12
 
-    <footer class="post-footer">
-      
+对“先做早开始的事件”贪心的输出：
+11
 
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.xrdrsp.pw/2020/03/27/luogu-p2433/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xrdrsp">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan Gao">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/27/luogu-p2433/" itemprop="url">[Solution] Luogu P2433</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-27T00:00:00+08:00">
-                03-27-2020
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Post modified&#58;</span>
-              
-              <time title="Post modified" itemprop="dateModified" datetime="2020-07-22T21:17:51+08:00">
-                07-22-2020
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Solution/" itemprop="url" rel="index">
-                    <span itemprop="name">Solution</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Solution/Luogu/" itemprop="url" rel="index">
-                    <span itemprop="name">Luogu</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  1k
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          这是本蒟蒻的第 $001$ 篇题解。
+所以明显地 WA 了。应该先做 2，再做 3，而根据这个算法，程序认为 1 开始的时间早，这样 $100$ 时间过去了，只做了一个事件，忽略了 2 和 3。所以这种算法是错误的。
+2.2 先 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/03/27/luogu-p2433/" title="[Solution] Luogu P2433">[Solution] Luogu P2433</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 03-27-2020 00:00:00"><i class="far fa-calendar-alt"></i>03-27-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Solution/">Solution</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/Solution/Luogu/">Luogu</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a></span></div><div class="content">这是本蒟蒻的第 $001$ 篇题解。
 Posted on Sun Mar 15, at 21:04:00
 upd on Mon Mar 16, at 07:02:41 （更改了少数部分。）
 问题 1输出 I love Luogu!。直接输出即可。
 1printf("I love Luogu!");
 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/03/27/luogu-p2433/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
+问题 2
+由于小 A 和 Uim 分别拿走了 $2$、$4$ 个，则他们一共拿走了 $2 + 4 = 6$ 个。
+由于在 1 中，我们算出来小 A 和 Uim 共拿走了 $6$ 个，则八尾勇拿走了 $ 10 - 6 = 4$ 个。
 
-    
+1printf("%d %d", 2 + 4, 10 - 2 - 4);
 
-    
+问题 3这个问题考察我们对 cpp 中 int 的理解。当两个整形变量做除法时，若无法整除，则向下取整。如 14 / 4 的结果为 3。
+所以可以尽情地使用整形变量的除法了。
 
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.xrdrsp.pw/2020/03/09/Mathematics-Tools/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xrdrsp">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan Gao">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/09/Mathematics-Tools/" itemprop="url">Mathematics Tools</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-09T16:20:31+08:00">
-                03-09-2020
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Post modified&#58;</span>
-              
-              <time title="Post modified" itemprop="dateModified" datetime="2020-07-02T17:18:34+08:00">
-                07-02-2020
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mathematics/" itemprop="url" rel="index">
-                    <span itemprop="name">Mathematics</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mathematics/Tools/" itemprop="url" rel="index">
-                    <span itemprop="name">Tools</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  536
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
+$\dfrac{\text{总苹果数}}{\text{同学数}}$ 即为答案。
+$\text{同学数} \times \text{每个同学分的苹果数}$ 即为答案。
+$\text{总苹果数} - \text{分 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/03/09/Mathematics-Tools/" title="Mathematics Tools">Mathematics Tools</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 03-09-2020 16:20:31"><i class="far fa-calendar-alt"></i>03-09-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Mathematics/">Mathematics</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/Mathematics/Tools/">Tools</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a></span></div><div class="content">
 函数求导工具
 
 函数输入框:
@@ -1536,878 +214,171 @@ upd on Mon Mar 16, at 07:02:41 （更改了少数部分。）
 
 极限计算器
 
+请输入一个函数并计算极限:
 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/03/09/Mathematics-Tools/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
+极限变量:     
+x趋向于:     
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
+极限类型 
+双侧极限
+右侧极限
+左侧极限
 
 
-    
-      
 
-  
 
-  
-  
-  
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.xrdrsp.pw/2020/01/01/Mathematics/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xrdrsp">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
+分数计算器
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan Gao">
-    </span>
+输入一个分数表达式:
 
-    
-      <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/01/Mathematics/" itemprop="url">Mathematics</a></h1>
-        
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-01T00:00:00+08:00">
-                01-01-2020
-              </time>
-            
 
-            
-              <span class="post-meta-divider">|</span>
-            
 
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Post modified&#58;</span>
-              
-              <time title="Post modified" itemprop="dateModified" datetime="2020-08-17T11:13:08+08:00">
-                08-17-2020
-              </time>
-            
-          </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mathematics/" itemprop="url" rel="index">
-                    <span itemprop="name">Mathematics</span>
-                  </a>
-                </span>
+方程求解
 
-                
-                
-              
-            </span>
-          
+输入逗号以分隔多个方程:
 
-          
-            
-          
 
-          
-          
 
-          
 
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  1.9k
-                </span>
-              
 
-              
 
-              
-            </div>
-          
 
-          
 
-        </div>
-      </header>
-    
+表达式化简
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+输入一个表达式来简化:
 
-      
-      
 
-      
-        
-          
-          $x^2$
+
+
+
+
+因式分解工具
+
+请输入您需要分解因式的表达式：:
+
+
+
+
+
+
+反函数计算器
+
+输入函数来计算其反函数:
+
+
+
+
+
+
+
+
+表达式计算器
+
+输入要计算的表达式:
+
+
+
+
+
+
+矩阵计算器
+
+输入矩阵 A:
+
+
+
+ 矩阵的行列式
+
+ 转置矩阵
+
+
+ 矩阵迹
+
+ 矩阵的秩
+
+ 逆矩阵
+
+ 特征值
+
+ 下三角矩阵
+
+ A2
+
+
+
+
+
+
+矩阵运算
+
+输入矩阵 A:输入矩阵 B:
+
+
+
+
+加法
+
+减法
+
+乘法
+
+
+
+
+
+
+
+质数发 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/01/01/Mathematics/" title="Mathematics">Mathematics</a><div class="article-meta-wrap"><time class="post-meta__date" title="Created 01-01-2020 00:00:00"><i class="far fa-calendar-alt"></i>01-01-2020</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Mathematics/">Mathematics</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></span></div><div class="content">$x^2$
 $ax^2+bx+c=0(a\neq0),x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$
 $x^2+y^2=r^2(r&gt;0)$
 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1(a\geq b,c=\sqrt{a^2-b^2})$
-$\
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/01/01/Mathematics/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
+$\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1(a&lt;b,c=\sqrt{b^2-a^2})$
+$y^2=2px(p&gt;0)$
+$(a\pmb)^2=a^2\pm2ab+b^2$
+$(a+b)(a-b)=a^2-b^2$
+$(a+b+c)^2=a^2+b^2+c^2+2ab+2bc+2ac$
+$a^2+b^2\geq 2ab$
+$\dfrac{a+b}2\geq\sqrt{ab}(a\geq0,b\geq0)$
 
-    
+$x^3$
+$a^3+b^3+c^3-3abc=(a+b+c)(a^2+b^2+c^2-ab-bc-ac)=(a+b+c)[(a-b)^2+(b-c)^2+(c-a)^2]$
+$(a\pm b)^3=a^3\pm3a^2b+3ab^2\pm b^3$
+ ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By xrdrsp</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="darkmode" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="Setting"><i class="fas fa-cog"></i></button><button id="go-up" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/search/local-search.js"></script><script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/d5bfbf89.js","daovoice")
+</script><script>var isChatBtn = false
+daovoice('init', {
+  app_id: 'd5bfbf89',},{
+  launcher: { 
+     disableLauncherIcon: isChatBtn // 悬浮 ICON 是否显示
+  },
+});
+daovoice('update');
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-      <div id="sidebar-dimmer"></div>
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">xrdrsp</p>
-              <p class="site-description motion-element" itemprop="description">blog</p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives">
-              
-                  <span class="site-state-item-count">17</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">categories</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">11</span>
-                  <span class="site-state-item-name">tags</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-            <div class="feed-link motion-element">
-              <a href="/atom.xml" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">xrdrsp</span>
-
-  
-</div>
-
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+if (isChatBtn) {
+  var chatBtn = document.getElementById("chat_btn")
+  chatBtn.addEventListener("click", function(){
+    daovoice('show')
+  });
+} else {
+  if (false) {
+    function chatBtnHide () {
+      daovoice('update', {},{
+        launcher: { 
+        disableLauncherIcon: true // 悬浮 ICON 是否显示
+        },
+      });
+    }
+    function chatBtnShow () {
+      daovoice('update', {},{
+        launcher: { 
+        disableLauncherIcon: false // 悬浮 ICON 是否显示
+        },
+      });
+    }
   }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-
-    
-
-
-
-
-
-
-
-  
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('-1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-  
-
-
-  
-
-  
-
-</body>
-</html>
+}</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body></html>
