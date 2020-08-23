@@ -1584,7 +1584,7 @@ blockquote footer cite:before {
 }
 #article-container pre,
 #article-container code {
-  font-family: Ubuntu Mono !important;
+  font-family: Courier New !important;
 }
 #article-container code {
   padding: 0.1rem 0.2rem;
