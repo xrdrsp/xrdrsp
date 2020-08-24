@@ -1584,7 +1584,7 @@ blockquote footer cite:before {
 }
 #article-container pre,
 #article-container code {
-  font-family: Courier New !important;
+  font-family: JetBrains Mono !important;
 }
 #article-container code {
   padding: 0.1rem 0.2rem;
