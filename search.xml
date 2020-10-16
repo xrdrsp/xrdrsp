@@ -19,7 +19,7 @@
     <p>最近 <i>CSP-S1</i> 的题一道都没刷。</p>
     <p>第 3 题空间计算是第一次乱搞出来。只要乱搞
         $$
-        \dfrac{2048 \times 1024 \times \dfrac{32}{8} \times 24 \times (60 * 8)}{1024 \times 1024} = 90 \mathrm{GB}
+        \dfrac{2048 \times 1024 \times \dfrac{32}{8} \times 24 \times (60 \times 8)}{1024 \times 1024} = 90 \mathrm{GB}
         $$
         就能 <font color="green">AC</font>！
     </p>
@@ -52,6 +52,7 @@
     <p>完善程序第一题较简单，$5\mathrm{min}$ 做完。</p>
     <p>完善程序第二题到底是排 $a$ 还是排 $b$ 啊？无语.jpg 看起来几乎全错。</p>
     <p>估分 $75 \pm 10$，神反转。<s>应该是 <font color="red">Dovuq</font> 收起 rp 给自己用了，差评。</s></p>
+    <p><a href="https://dovuq.github.io/oi/csp2020/" target="_blank" rel="noopener">贴上神仙 <font color="red">Dovuq</font> 的游记！</a></p>
     <p><i>Will be continued if passed.</i></p>
 </body>
 </html>]]></content>
@@ -312,7 +313,7 @@ a_x + a_y \neq a_z</script><p>则这个数组被称为”完整“的数组。</
   </entry>
   <entry>
     <title>为告别纪念，为责任前行</title>
-    <url>/2020/04/04/%E4%B8%BA%E5%91%8A%E5%88%AB%E7%BA%AA%E5%BF%B5%EF%BC%8C%E4%B8%BA%E8%B4%A3%E4%BB%BB%E5%89%8D%E8%A1%8C.md/</url>
+    <url>/2020/04/04/%E4%B8%BA%E5%91%8A%E5%88%AB%E7%BA%AA%E5%BF%B5%EF%BC%8C%E4%B8%BA%E8%B4%A3%E4%BB%BB%E5%89%8D%E8%A1%8C/</url>
     <content><![CDATA[<p>我们在这个冬天所经历的一切，是悲伤的记忆，是告别亲人的不舍，也是坚定抗争中生命的顽强与不屈。带着逝者的遗志，我们不会被轻易击垮。严冬之后，必有万物复苏，必有夏花烂漫。</p>
 <p>不觉间，将是清明。</p>
 <p>对人们而言，刚刚过去的这个冬天，似乎格外漫长。突如其来的新冠肺炎疫情，让中国社会与公众的生活进入了暂停状态。壮士断腕般的“封城”举措，“全国一盘棋”式的公共卫生动员，加上史无前例的大规模隔离行动，让我们带着与病毒抗争到底的决心，度过了一段艰难时光。</p>
