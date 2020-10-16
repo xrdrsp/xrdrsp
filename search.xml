@@ -19,7 +19,7 @@
     <p>最近 <i>CSP-S1</i> 的题一道都没刷。</p>
     <p>第 3 题空间计算是第一次乱搞出来。只要乱搞
         $$
-        \dfrac{2048 \times 1024 \times \dfrac{32}{8} \times 24 * (60 * 8)}{1024 * 1024}
+        \dfrac{2048 \times 1024 \times \dfrac{32}{8} \times 24 \times (60 * 8)}{1024 times 1024} = 90 \mathrm{GB}
         $$
         就能 <font color="green">AC</font>！
     </p>
