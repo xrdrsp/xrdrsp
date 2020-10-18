@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.xrdrsp.pw/"/>
-  <updated>2020-10-16T13:17:37.219Z</updated>
+  <updated>2020-10-18T13:44:59.466Z</updated>
   <id>http://blog.xrdrsp.pw/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://blog.xrdrsp.pw/2020/10/16/CSP-J-S2020/"/>
     <id>http://blog.xrdrsp.pw/2020/10/16/CSP-J-S2020/</id>
     <published>2020-10-16T12:44:54.000Z</published>
-    <updated>2020-10-16T13:17:37.219Z</updated>
+    <updated>2020-10-18T13:44:59.466Z</updated>
     
-    <content type="html"><![CDATA[<html><body>    <p>这是 <font color="red">xrdrsp</font> 第一次写大型比赛的游记。</p>    <h2><spam><i>CSP-J1/S1</i></spam></h2>    <h3><spam><i>CSP-S1</i></spam></h3>    <ul>        <li>时间：11-10-2020 09:30—11:30</li>        <li>准考证号：<code>ZJ-00385</code></li>        <li>考场：2（第 2 考场奆佬也很多）</li>        <li>座位号：33</li>    </ul>    <p>09:05 进场，直接进考场，发现了神仙 wt 同考场！</p>    <p>最近 <i>CSP-S1</i> 的题一道都没刷。</p>    <p>第 3 题空间计算是第一次乱搞出来。只要乱搞        $$        \dfrac{2048 \times 1024 \times \dfrac{32}{8} \times 24 \times (60 \times 8)}{1024 \times 1024} = 90 \mathrm{GB}        $$        就能 <font color="green">AC</font>！    </p>    <p>第 4 题，发现我连哈希都忘了？！然后把每个选项都处理了一遍，只有 $\left\lfloor x \right\rfloor \mod 11$ 得到的所有余数都不一样，于是就选了 D。</p>    <p>第 10 题，显然是 CRT。然而我不会，于是手膜出可能是 $58$？</p>    <p>选择题挂了第 6 和第 7 题。自己根本啥都没学过。</p>    <p>阅读程序第一个，虽然看得懂，但是不知道它在算什么，仍然手膜。感觉比较简单。</p>    <p>阅读程序第二个，看得出分治，居然没看出来是 nth_element？剩下的都在手膜，看起来选择 time complexity 的挂了好多。</p>    <p>阅读程序第三个，手写 <code>Map</code> 和手写堆是什么奇特操作？99 行代码是什么奇特操作？显然没看懂，咕咕了好久。那两个 4 分的选择题好像也水 <font color="green">AC</font> 了吧。听说第四个选择题可以找规律，但为啥我找到的规律在答案里不存在？请 <font color="red">Dovuq</font> 解释。</p>    <p>完善程序第一个，$w$ 和 $v$ 写反是什么奇特操作？然而我拥有 <font color="red">Dovuq</font> 的 rp，变成了列文虎克。</p>    <p>完善程序第二个，看到位运算显然就完蛋了。瞎选了几个，时间到，交卷。</p>    <p>估分 $75 \pm 5$。这次 <i>CSP-S</i> 感觉比较良好，估分比预计高，大概是 <font color="red">Dovuq</font> 给的 rp 的缘故罢。经验是不会的就要手膜，<font color="red">Dovuq</font>给 rp 的话就基本上能 <font color="green">AC</font>。</p>    <p>11:35，好像看到了 <font color="red">Dovuq</font>，然后就吃饭去了。</p>    <h3><spam><i>CSP-J1</i></spam></h3>    <ul>        <li>时间：11-10-2020 14:30—16:30</li>        <li>准考证号：<code>ZJ-00960</code></li>        <li>考场：5</li>        <li>座位号：20</li>    </ul>    <p>下午狂补哈希和堆，成功面基 <font color="red">Dovuq</font>，<font color="red">Dovuq</font>长高了，也变强了！</p>    <p>14:10 进场，尝试去考场找到 <font color="red">Dovuq</font>，然而找不到。14:15，在考场里发现水杯子没带进来，特别渴，于是去拿水，保安好评！从 14:05 开始宣读考场纪律，讲解考场内容等等，14:30 刚好讲到“赛后可向吸吸F实名举报，邮箱是，nio，啊，noi@ccf.org.cn……“，却只发了草稿纸。突然开始发答题卡和试卷，我们晚考了好几分钟。</p>    <p>下午的基础组明显 rp 不如上午，并且吃了饭想睡觉了？！节制自己喝水，争取在考完试的时候刚好喝完。中午饭差评，总是想喝水。</p>    <p>选择题好多迷惑行为，第 8 题题面读不懂，请 <font color="red">Dovuq</font> 解释。</p>    <p>三个离散数学，错了最简单的那个。原因是两个人排在一起，他们自己的顺序有两种情况，也就是没 $\times 2$。这种题明明好像考前才在一本通上看过。</p>    <p>没仔细对，选择题错的肯定比 <i>CSP-S1</i> 多，又是什么迷惑行为？</p>    <p>阅读程序第一题看懂了。把 <code>encoder[]</code> 里的所有大写英文字母的 ASCII $-65$ 以后的位置按顺序存 $A, B, C \cdots$ 到 <code>decoder[]</code>，空的位置继续按顺序排字母。最后把字母替换。看起来应该全对。</p>    <p>阅读程序第二题显然没看懂，只能手膜，应该错了一些。</p>    <p>阅读程序第三题还是没看懂，看起来没时间手膜了，于是瞎选，错了好多。</p>    <p>完善程序第一题较简单，$5\mathrm{min}$ 做完。</p>    <p>完善程序第二题到底是排 $a$ 还是排 $b$ 啊？无语.jpg 看起来几乎全错。</p>    <p>估分 $75 \pm 10$，神反转。<s>应该是 <font color="red">Dovuq</font> 收起 rp 给自己用了，差评。</s></p>    <p><a href="https://dovuq.github.io/oi/csp2020/" target="_blank" rel="noopener">贴上神仙 <font color="red">Dovuq</font> 的游记！</a></p>    <p><i>Will be continued if passed.</i></p></body></html>]]></content>
+    <content type="html"><![CDATA[<html><body>    <p>这是 <font color="red">xrdrsp</font> 第一次写大型比赛的游记。</p>    <h2><spam><i>CSP-J1/S1</i></spam></h2>    <h3><spam><i>CSP-S1</i></spam></h3>    <ul>        <li>时间：11-10-2020 09:30—11:30</li>        <li>准考证号：<code>ZJ-00385</code></li>        <li>考场：2（第 2 考场奆佬也很多）</li>        <li>座位号：33</li>    </ul>    <p>09:05 进场，直接进考场，发现了神仙 wt 同考场！</p>    <p>最近 <i>CSP-S1</i> 的题一道都没刷。</p>    <p>第 3 题空间计算是第一次乱搞出来。只要乱搞        $$        \dfrac{2048 \times 1024 \times \dfrac{32}{8} \times 24 \times (60 \times 8)}{1024 \times 1024} = 90 \mathrm{GB}        $$        就能 <font color="green">AC</font>！    </p>    <p>第 4 题，发现我连哈希都忘了？！然后把每个选项都处理了一遍，只有 $\left\lfloor x \right\rfloor \mod 11$ 得到的所有余数都不一样，于是就选了 D。</p>    <p>第 10 题，显然是 CRT。然而我不会，于是手膜出可能是 $58$？</p>    <p>选择题挂了第 6 和第 7 题。自己根本啥都没学过。</p>    <p>阅读程序第一个，虽然看得懂，但是不知道它在算什么，仍然手膜。感觉比较简单。</p>    <p>阅读程序第二个，看得出分治，居然没看出来是 nth_element？剩下的都在手膜，看起来选择 time complexity 的挂了好多。</p>    <p>阅读程序第三个，手写 <code>Map</code> 和手写堆是什么奇特操作？99 行代码是什么奇特操作？显然没看懂，咕咕了好久。那两个 4 分的选择题好像也水 <font color="green">AC</font> 了吧。听说第四个选择题可以找规律，但为啥我找到的规律在答案里不存在？请 <font color="red">Dovuq</font> 解释。</p>    <p>完善程序第一个，$w$ 和 $v$ 写反是什么奇特操作？然而我拥有 <font color="red">Dovuq</font> 的 rp，变成了列文虎克。</p>    <p>完善程序第二个，看到位运算显然就完蛋了。瞎选了几个，时间到，交卷。</p>    <p>估分 $75 \pm 5$。这次 <i>CSP-S</i> 感觉比较良好，估分比预计高，大概是 <font color="red">Dovuq</font> 给的 rp 的缘故罢。经验是不会的就要手膜，<font color="red">Dovuq</font>给 rp 的话就基本上能 <font color="green">AC</font>。</p>    <p><b>UPD</b> 看起来分出了，64，不知道啥原因跟估分差这么多。</p>    <p>11:35，好像看到了 <font color="red">Dovuq</font>，然后就吃饭去了。</p>    <h3><spam><i>CSP-J1</i></spam></h3>    <ul>        <li>时间：11-10-2020 14:30—16:30</li>        <li>准考证号：<code>ZJ-00960</code></li>        <li>考场：5</li>        <li>座位号：20</li>    </ul>    <p>下午狂补哈希和堆，成功面基 <font color="red">Dovuq</font>，<font color="red">Dovuq</font>长高了，也变强了！</p>    <p>14:10 进场，尝试去考场找到 <font color="red">Dovuq</font>，然而找不到。14:15，在考场里发现水杯子没带进来，特别渴，于是去拿水，保安好评！从 14:05 开始宣读考场纪律，讲解考场内容等等，14:30 刚好讲到“赛后可向吸吸F实名举报，邮箱是，nio，啊，noi@ccf.org.cn……“，却只发了草稿纸。突然开始发答题卡和试卷，我们晚考了好几分钟。</p>    <p>下午的基础组明显 rp 不如上午，并且吃了饭想睡觉了？！节制自己喝水，争取在考完试的时候刚好喝完。中午饭差评，总是想喝水。</p>    <p>选择题好多迷惑行为，第 8 题题面读不懂，请 <font color="red">Dovuq</font> 解释。</p>    <p>三个离散数学，错了最简单的那个。原因是两个人排在一起，他们自己的顺序有两种情况，也就是没 $\times 2$。这种题明明好像考前才在一本通上看过。</p>    <p>没仔细对，选择题错的肯定比 <i>CSP-S1</i> 多，又是什么迷惑行为？</p>    <p>阅读程序第一题看懂了。把 <code>encoder[]</code> 里的所有大写英文字母的 ASCII $-65$ 以后的位置按顺序存 $A, B, C \cdots$ 到 <code>decoder[]</code>，空的位置继续按顺序排字母。最后把字母替换。看起来应该全对。</p>    <p>阅读程序第二题显然没看懂，只能手膜，应该错了一些。</p>    <p>阅读程序第三题还是没看懂，看起来没时间手膜了，于是瞎选，错了好多。</p>    <p>完善程序第一题较简单，$5\mathrm{min}$ 做完。</p>    <p>完善程序第二题到底是排 $a$ 还是排 $b$ 啊？无语.jpg 看起来几乎全错。</p>    <p>估分 $75 \pm 10$，神反转。<s>应该是 <font color="red">Dovuq</font> 收起 rp 给自己用了，差评。</s></p>    <p><b>UPD</b> 看起来分出了，73，虽然在预估范围内，但是还是过不了，听说要减机子？</p>    <p><a href="https://dovuq.github.io/oi/csp2020/" target="_blank" rel="noopener">贴上神仙 <font color="red">Dovuq</font> 的游记！</a></p>    <p><i>Will be continued if passed.</i></p></body></html>]]></content>
     
     <summary type="html">
     
@@ -78,34 +78,6 @@
   </entry>
   
   <entry>
-    <title>[Solution] Codeforces 1372A - Omkar and Completion</title>
-    <link href="http://blog.xrdrsp.pw/2020/07/19/codeforces-1372a/"/>
-    <id>http://blog.xrdrsp.pw/2020/07/19/codeforces-1372a/</id>
-    <published>2020-07-18T16:00:00.000Z</published>
-    <updated>2020-07-22T15:28:32.463Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Main-Idea"><a href="#Main-Idea" class="headerlink" title="Main Idea"></a>Main Idea</h1><p>给你一个整数 $n$，尝试找出任意一个长度为 $n$ 的”完整“的数组 $a$。如果一个数组所有的元素都是整数、都不超过 $1000$，而且对于下标 $x, y, z$，满足：</p><script type="math/tex; mode=display">a_x + a_y \neq a_z</script><p>则这个数组被称为”完整“的数组。</p><h1 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h1><p>我们很容易地发现，暴力地枚举所有可能是不可行的。而 CF div.2 的第一题一般不考察算法。对于这一题，您可以找到通过某种方法找到的满足任何条件的解。这样比较方便且省时间。</p><p>若 $a$ 中所有元素都相等， 即 $a_1 = a_2 = \cdots = a_n$。这时，对于任意三个下标 $p, q, r$，$a_p + a_q = 2a_p = 2a_q \neq a_r$。（正整数）</p><p>所以如果我们把数组中所有数都赋值成不大于 $1000$ 的数，问题解决了！</p><h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (t--) &#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; x;                  <span class="comment">// 输入</span></span><br><span class="line">        <span class="keyword">while</span> (x--) &#123;</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"1 "</span>;          <span class="comment">// 输出同样的值可以保证满足条件。</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Main-Idea&quot;&gt;&lt;a href=&quot;#Main-Idea&quot; class=&quot;headerlink&quot; title=&quot;Main Idea&quot;&gt;&lt;/a&gt;Main Idea&lt;/h1&gt;&lt;p&gt;给你一个整数 $n$，尝试找出任意一个长度为 $n$ 的”完整“的数组 $a$。如果
-      
-    
-    </summary>
-    
-    
-      <category term="Solution" scheme="http://blog.xrdrsp.pw/categories/Solution/"/>
-    
-      <category term="Codeforces" scheme="http://blog.xrdrsp.pw/categories/Solution/Codeforces/"/>
-    
-    
-      <category term="题解" scheme="http://blog.xrdrsp.pw/tags/%E9%A2%98%E8%A7%A3/"/>
-    
-  </entry>
-  
-  <entry>
     <title>[Solution] Codeforces 1385B - Restore the Permutation by Merger</title>
     <link href="http://blog.xrdrsp.pw/2020/07/19/codeforces-1385b/"/>
     <id>http://blog.xrdrsp.pw/2020/07/19/codeforces-1385b/</id>
@@ -132,6 +104,34 @@
       <category term="题解" scheme="http://blog.xrdrsp.pw/tags/%E9%A2%98%E8%A7%A3/"/>
     
       <category term="模拟" scheme="http://blog.xrdrsp.pw/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Solution] Codeforces 1372A - Omkar and Completion</title>
+    <link href="http://blog.xrdrsp.pw/2020/07/19/codeforces-1372a/"/>
+    <id>http://blog.xrdrsp.pw/2020/07/19/codeforces-1372a/</id>
+    <published>2020-07-18T16:00:00.000Z</published>
+    <updated>2020-07-22T15:28:32.463Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Main-Idea"><a href="#Main-Idea" class="headerlink" title="Main Idea"></a>Main Idea</h1><p>给你一个整数 $n$，尝试找出任意一个长度为 $n$ 的”完整“的数组 $a$。如果一个数组所有的元素都是整数、都不超过 $1000$，而且对于下标 $x, y, z$，满足：</p><script type="math/tex; mode=display">a_x + a_y \neq a_z</script><p>则这个数组被称为”完整“的数组。</p><h1 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h1><p>我们很容易地发现，暴力地枚举所有可能是不可行的。而 CF div.2 的第一题一般不考察算法。对于这一题，您可以找到通过某种方法找到的满足任何条件的解。这样比较方便且省时间。</p><p>若 $a$ 中所有元素都相等， 即 $a_1 = a_2 = \cdots = a_n$。这时，对于任意三个下标 $p, q, r$，$a_p + a_q = 2a_p = 2a_q \neq a_r$。（正整数）</p><p>所以如果我们把数组中所有数都赋值成不大于 $1000$ 的数，问题解决了！</p><h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (t--) &#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; x;                  <span class="comment">// 输入</span></span><br><span class="line">        <span class="keyword">while</span> (x--) &#123;</span><br><span class="line">            <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"1 "</span>;          <span class="comment">// 输出同样的值可以保证满足条件。</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Main-Idea&quot;&gt;&lt;a href=&quot;#Main-Idea&quot; class=&quot;headerlink&quot; title=&quot;Main Idea&quot;&gt;&lt;/a&gt;Main Idea&lt;/h1&gt;&lt;p&gt;给你一个整数 $n$，尝试找出任意一个长度为 $n$ 的”完整“的数组 $a$。如果
+      
+    
+    </summary>
+    
+    
+      <category term="Solution" scheme="http://blog.xrdrsp.pw/categories/Solution/"/>
+    
+      <category term="Codeforces" scheme="http://blog.xrdrsp.pw/categories/Solution/Codeforces/"/>
+    
+    
+      <category term="题解" scheme="http://blog.xrdrsp.pw/tags/%E9%A2%98%E8%A7%A3/"/>
     
   </entry>
   
@@ -195,9 +195,9 @@
     
       <category term="题解" scheme="http://blog.xrdrsp.pw/tags/%E9%A2%98%E8%A7%A3/"/>
     
-      <category term="语法" scheme="http://blog.xrdrsp.pw/tags/%E8%AF%AD%E6%B3%95/"/>
-    
       <category term="模拟" scheme="http://blog.xrdrsp.pw/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
+      <category term="语法" scheme="http://blog.xrdrsp.pw/tags/%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
